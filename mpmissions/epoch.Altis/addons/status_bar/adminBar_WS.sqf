@@ -1,8 +1,8 @@
 waitUntil {!(isNull (findDisplay 46))};
 disableSerialization;
 
-	_rscLayer = "osefStatusBarAdminWS" call BIS_fnc_rscLayer;
-	_rscLayer cutRsc["osefStatusBarAdminWS","PLAIN"];
+	_rscLayer = "statusBar" call BIS_fnc_rscLayer;
+	_rscLayer cutRsc["statusBar","PLAIN"];
 	systemChat format["Loading Admin info...", _rscLayer];
 	[] spawn {
 
@@ -32,12 +32,12 @@ disableSerialization;
 			
 		//moved the creation of the status bar inside the loop and create it if it is null,
 		//this is to handle instance where the status bar is disappearing 
-		if(isNull ((uiNamespace getVariable "osefStatusBarAdminWS")displayCtrl 55554)) then
+		if(isNull ((uiNamespace getVariable "statusBar")displayCtrl 55555)) then
 		{
 			diag_log "statusbar is null create";
 			disableSerialization;
-			_rscLayer = "osefStatusBarAdminWS" call BIS_fnc_rscLayer;
-			_rscLayer cutRsc["osefStatusBarAdminWS","PLAIN"];
+			_rscLayer = "statusBar" call BIS_fnc_rscLayer;
+			_rscLayer cutRsc["statusBar","PLAIN"];
 		};		
 			
 		//initialize variables and set values
@@ -55,9 +55,10 @@ disableSerialization;
 		_dir = getDir (vehicle player);
 		_grid = mapGridPosition  player; _xx = (format[_grid]) select  [0,3]; 
 		_yy = (format[_grid]) select  [3,3];  
-		_time = (round(360-(serverTime)/60));  //edit the '240' value (60*4=240) to change the countdown timer if your server restarts are shorter or longer than 4 hour intervals
+		_time = (round(240-(serverTime)/60));  //edit the '240' value (60*4=240) to change the countdown timer if your server restarts are shorter or longer than 4 hour intervals
 		_hours = (floor(_time/60));
 		_minutes = (_time - (_hours * 60));
+		_players = (count playableunits -1);
 				
 		switch(_minutes) do {
 			case 9: {_minutes = "09"};
@@ -164,7 +165,7 @@ disableSerialization;
 		_colourStamina = _colourDefault;
 		
 		//display the information 
-		((uiNamespace getVariable "osefStatusBarAdminWS")displayCtrl 55554)ctrlSetStructuredText parseText 
+		((uiNamespace getVariable "statusBar")displayCtrl 55555)ctrlSetStructuredText parseText 
 			format["
 			<t shadow='1' shadowColor='#000000' color='%10'><img size='1.6'  shadowColor='#000000' image='addons\status_bar\images\players.paa' color='%10'/> %2</t>
 			<t shadow='1' shadowColor='#000000' color='%11'><img size='1.6'  shadowColor='#000000' image='addons\status_bar\images\damage.paa' color='%11'/> %3%1</t> 
@@ -178,7 +179,7 @@ disableSerialization;
 			<t shadow='1' shadowColor='#000000' color='%10'>POS: %16</t>
 			<t shadow='1' shadowColor='#000000' color='%10'>DIR: %17</t>",
 					"%", 
-					count playableUnits,
+					_players,
 					_damage,
 					_wallet, 
 					_hunger, 

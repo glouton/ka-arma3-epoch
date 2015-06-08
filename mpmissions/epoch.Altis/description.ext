@@ -84,9 +84,9 @@ class CfgEpochClient
 class CfgEpochSapper
 {
 	detonateDistMax = 8; //Random distance between 3m and this number at which sapper detonates. Min value = 4
-	groanTrig = 16; //Percentage chance of a groan. Min value = 4
+	groanTrig = 20; //Percentage chance of a groan. Min value = 4
 	sRange = 300; //Distance from target over which sapper will dispose. Range within which sapper code will be aware of targets. Distance up to which sapper will attempt to find a spot to hide in. Min Value = 150.
-	smellDist = 24; //Distance up to which sapper can smell. Used to decide if sapper can see target when deciding to charge and influences target selection. Is influenced by wind direction. Min Value = 8.
+	smellDist = 30; //Distance up to which sapper can smell. Used to decide if sapper can see target when deciding to charge and influences target selection. Is influenced by wind direction. Min Value = 8.
 };
 
 class CfgEpochUAV

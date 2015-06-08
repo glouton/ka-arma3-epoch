@@ -41,3 +41,4 @@ if ((_hasEPEH == "NEVER")) then {[] spawn cm_EP_LOOP;};
 if (cmEarplugsKeyPressEnabled) then {
 	[] spawn {cmKeyPress = (findDisplay 46) displayAddEventHandler ["KeyDown","if ((_this select 1) == cmEarplugs_hotkeyDIKCodeNumber) then {[] call cm_Earplugs_FUNc;};"];};
 };
+
