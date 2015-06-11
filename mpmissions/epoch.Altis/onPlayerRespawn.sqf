@@ -42,7 +42,7 @@ if (cmEarplugsKeyPressEnabled) then {
 	[] spawn {cmKeyPress = (findDisplay 46) displayAddEventHandler ["KeyDown","if ((_this select 1) == cmEarplugs_hotkeyDIKCodeNumber) then {[] call cm_Earplugs_FUNc;};"];};
 };
 
-// A3-Epoch-Spawn-Menu
+// A3 Epoch Spawn Menu
 if (isNil "inSpawnPoint") then 
 {
 	inSpawnPoint = false;
