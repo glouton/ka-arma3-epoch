@@ -107,5 +107,7 @@ class RscTitles
 	#include "addons\Status_Bar\statusBar.hpp"
 };
 
-	#include "spawnsystem\dialog.hpp"
+
+
+
 

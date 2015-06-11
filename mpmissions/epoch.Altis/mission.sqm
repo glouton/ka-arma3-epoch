@@ -2037,6 +2037,7 @@ class Mission
 			};
 		};
 	};
+	
 	class Vehicles
 	{
 		items=1;
@@ -2052,7 +2053,7 @@ class Mission
 			init="this setObjectTexture [0, ""image.jpg""]";
 		};
 	};
-	
+
 	class Markers
 	{
 		items = 3;
@@ -2076,6 +2077,7 @@ class Mission
 		};
 	};
 };
+	
 class Intro
 {
 	addOns[] = {"a3_map_altis"};
@@ -2100,7 +2102,8 @@ class Intro
 		forecastFogDecay = 0.013;
 	};
 };
-class OutroWin
+
+	class OutroWin
 {
 	addOns[] = {"a3_map_altis"};
 	addOnsAuto[] = {"a3_map_altis"};
@@ -2148,19 +2151,5 @@ class OutroLoose
 		forecastFogDecay = 0.013;
 	};
 };
-	class Vehicles
-	{
-		items=1;
-		class Item0
-		{
-			position[]={23600.76,3.1900001,17992.961};//Spawn camera EPOCH 0303 Altis
-			azimut=180;
-			offsetY=0.2;
-			id=1;
-			side="EMPTY";
-			vehicle="Land_InfoStand_V1_F";
-			skill=0.60000002;
-			init="this enableSimulation false; this allowDamage false; this allowDamage false; this addAction[""Parachute Spawn"",""spawnsystem\initspawn.sqf""]";
-		};
-	};
+
 //};
