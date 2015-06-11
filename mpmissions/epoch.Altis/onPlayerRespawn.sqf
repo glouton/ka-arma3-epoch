@@ -49,5 +49,5 @@ if (isNil "inSpawnPoint") then
 };
 waitUntil { inSpawnPoint };
 createDialog "spaz_spawn";
-[] execVM "Spaz_Spawn.sqf";
+[] execVM "addons\A3_Epoch_Spawn_Menu\Spaz_Spawn.sqf";
 noesckey = (findDisplay 8332) displayAddEventHandler ["KeyDown", "if ((_this select 1) == 1) then { true }"];
