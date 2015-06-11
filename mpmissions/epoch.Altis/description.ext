@@ -104,7 +104,6 @@ class CfgEpochAirDrop
 
 class RscTitles
 {
-	#include "addons\Status_Bar\statusBar.hpp"
+	#include "addons\status_bar\statusBar.hpp"
+	#include "addons\spawn_menu\spaz_spawn.hpp"
 };
-
-#include "spaz_spawn.hpp"

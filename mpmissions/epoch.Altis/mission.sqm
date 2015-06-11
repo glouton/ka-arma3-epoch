@@ -2055,6 +2055,7 @@ class Mission
 	};
 
 	class Sensors {
+		items = 1;
 		class Item0
 		{
 			position[] = {8886.766,102.1,9097.741}; //respawn_west Location
