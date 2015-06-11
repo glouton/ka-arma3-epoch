@@ -176,133 +176,123 @@ class RscFrame
     sizeEx = 0.03;
     text = "";
 };
-
-class spawn_dialog
+class Box
 {
-    idd=666;
+    type = CT_STATIC;
+    idc = -1;
+    style = ST_CENTER;
+    shadow = 2;
+    colorBackground[] = { 0, 0, 0, 0.5 };
+    colorText[] = {1,1,1,0.9};
+    font = "PuristaLight";
+    sizeEx = 0.03;
+    text = "";
+};
+class spaz_spawn
+{
+    idd=8332;
     movingenable=false;
     
     class controls 
     {
-		class frame: RscFrame
-		{
-			idc = 1800;
-			text = "Spawn system bY KroSaver"; //--- ToDo: Localize;
-			x = 0.304062 * safezoneW + safezoneX;
-			y = 0.236 * safezoneH + safezoneY;
-			w = 0.386719 * safezoneW;
-			h = 0.462 * safezoneH;
-		};
-		class imagen: RscPicture
-		{
-			idc = 1200;
-			text = "";
-			x = 0.309219 * safezoneW + safezoneX;
-			y = 0.269 * safezoneH + safezoneY;
-			w = 0.293906 * safezoneW;
-			h = 0.418 * safezoneH;
-		};
-		class btnKavala: RscButton
-		{
-			idc = 1600;
-			text = "ZON.KAVALA"; //--- ToDo: Localize;
-			x = 0.608281 * safezoneW + safezoneX;
-			y = 0.269 * safezoneH + safezoneY;
-			w = 0.0773437 * safezoneW;
-			h = 0.033 * safezoneH;
-			colorText[] = {0.98,0.71,0.03,1};
-			action = "closedialog 0; _nil=[] spawn {call KAVALA;};";
-		};
-		class btnWEST: RscButton
-		{
-			idc = 1601;
-			text = "TRA.WEST"; //--- ToDo: Localize;
-			x = 0.608281 * safezoneW + safezoneX;
-			y = 0.324 * safezoneH + safezoneY;
-			w = 0.0773437 * safezoneW;
-			h = 0.033 * safezoneH;
-			colorText[] = {0.98,0.71,0.03,1};
-			action = "closedialog 0; _nil=[] spawn {call TRA_WEST;};";
-		};
-		class btnGalati: RscButton
-		{
-			idc = 1602;
-			text = "GALATI"; //--- ToDo: Localize;
-			x = 0.608281 * safezoneW + safezoneX;
-			y = 0.379 * safezoneH + safezoneY;
-			w = 0.0773437 * safezoneW;
-			h = 0.033 * safezoneH;
-			colorText[] = {0.98,0.71,0.03,1};
-			action = "closedialog 0; _nil=[] spawn {call GALATI;};";
-		};
-		class btnCENTER: RscButton
-		{
-			idc = 1603;
-			text = "TRA.CENTER"; //--- ToDo: Localize;
-			x = 0.608281 * safezoneW + safezoneX;
-			y = 0.434 * safezoneH + safezoneY;
-			w = 0.0773437 * safezoneW;
-			h = 0.033 * safezoneH;
-			colorText[] = {0.98,0.71,0.03,1};
-			action = "closedialog 0; _nil=[] spawn {call TRA_CENTER;};";
-		};
-		class btnAthira: RscButton
-		{
-			idc = 1604;
-			text = "ATHIRA"; //--- ToDo: Localize;
-			x = 0.608281 * safezoneW + safezoneX;
-			y = 0.489 * safezoneH + safezoneY;
-			w = 0.0773437 * safezoneW;
-			h = 0.033 * safezoneH;
-			colorText[] = {0.98,0.71,0.03,1};
-			action = "closedialog 0; _nil=[] spawn {call ATHIRA;};";
-		};
-		class btnEAST: RscButton
-		{
-			idc = 1605;
-			text = "TRA.EAST"; //--- ToDo: Localize;
-			x = 0.608281 * safezoneW + safezoneX;
-			y = 0.544 * safezoneH + safezoneY;
-			w = 0.0773437 * safezoneW;
-			h = 0.033 * safezoneH;
-			colorText[] = {0.98,0.71,0.03,1};
-			action = "closedialog 0; _nil=[] spawn {call TRA_EAST;};";
-		};
-		class btnPAROSSOFIA: RscButton
-		{
-			idc = 1606;
-			text = "PAROS-SOFIA"; //--- ToDo: Localize;
-			x = 0.608281 * safezoneW + safezoneX;
-			y = 0.599 * safezoneH + safezoneY;
-			w = 0.0773437 * safezoneW;
-			h = 0.033 * safezoneH;
-			colorText[] = {0.98,0.71,0.03,1};
-			action = "closedialog 0; _nil=[] spawn {call PAROSSOFIA;};";
-		};
-		class btnPanagia: RscButton
-		{
-			idc = 1607;
-			text = "PANAGIA"; //--- ToDo: Localize;
-			x = 0.608281 * safezoneW + safezoneX;
-			y = 0.654 * safezoneH + safezoneY;
-			w = 0.0773437 * safezoneW;
-			h = 0.033 * safezoneH;
-			colorText[] = {0.98,0.71,0.03,1};
-			action = "closedialog 0; _nil=[] spawn {call PANAGIA;};";
-		};  
 
-		class btnClose: RscButton
-		{
-			idc = 1608;
-			text = "CLOSE"; //--- ToDo: Localize;
-			x = 0.608281 * safezoneW + safezoneX;
-			y = 0.709 * safezoneH + safezoneY;
-			w = 0.0773437 * safezoneW;
-			h = 0.033 * safezoneH;
-			colorText[] = {0.61,0.14,0,1};
-			action = "closedialog 0;";
-		};
-		
+        class spaz_background: Box
+        {
+            idc = 1;
+            text = ""; //--- ToDo: Localize;
+            x = 0.304109 * safezoneW + safezoneX;
+            y = 0.246969 * safezoneH + safezoneY;
+            w = 0.391781 * safezoneW;
+            h = 0.506063 * safezoneH;
+        };
+        class spaz_frame: RscFrame
+        {
+            idc = 1800;
+            text = "Menu by Sparrow"; //--- ToDo: Localize;
+            x = 0.293799 * safezoneW + safezoneX;
+            y = 0.224966 * safezoneH + safezoneY;
+            w = 0.412402 * safezoneW;
+            h = 0.550068 * safezoneH;
+        };
+        class spaz_title: RscText
+        {
+            idc = 1000;
+            text = "Choose Your Spawn"; //--- ToDo: Localize;
+            x = 0.36597 * safezoneW + safezoneX;
+            y = 0.25797 * safezoneH + safezoneY;
+            w = 0.206201 * safezoneW;
+            h = 0.0550068 * safezoneH;
+        };
+        class spaz_map: RscPicture
+        {
+            idc = 1200;
+            text = "";
+            x = 0.314419 * safezoneW + safezoneX;
+            y = 0.312977 * safezoneH + safezoneY;
+            w = 0.278371 * safezoneW;
+            h = 0.429053 * safezoneH;
+        };
+        class spaz_sb1: RscButton
+        {
+            idc = 1600;
+            text = "NORTH"; //--- ToDo: Localize;
+            x = 0.618565 * safezoneW + safezoneX;
+            y = 0.323978 * safezoneH + safezoneY;
+            w = 0.0618602 * safezoneW;
+            h = 0.0440055 * safezoneH;
+            action = "closedialog 0; _nil=[] spawn {call SPAZ_SPAWN_N;};";
+            tooltip = "Spawn Area NORTH";
+        };
+        class spaz_sb2: RscButton
+        {
+            idc = 1601;
+            text = "SOUTH"; //--- ToDo: Localize;
+            x = 0.618565 * safezoneW + safezoneX;
+            y = 0.389986 * safezoneH + safezoneY;
+            w = 0.0618602 * safezoneW;
+            h = 0.0440055 * safezoneH;
+            action = "closedialog 0; _nil=[] spawn {call SPAZ_SPAWN_S;};";
+        };
+        class spaz_sb3: RscButton
+        {
+            idc = 1602;
+            text = "EAST"; //--- ToDo: Localize;
+            x = 0.618565 * safezoneW + safezoneX;
+            y = 0.455995 * safezoneH + safezoneY;
+            w = 0.0618602 * safezoneW;
+            h = 0.0440055 * safezoneH;
+            action = "closedialog 0; _nil=[] spawn {call SPAZ_SPAWN_E;};";
+        };
+        class spaz_sb4: RscButton
+        {
+            idc = 1603;
+            text = "WEST"; //--- ToDo: Localize;
+            x = 0.618565 * safezoneW + safezoneX;
+            y = 0.522003 * safezoneH + safezoneY;
+            w = 0.0618602 * safezoneW;
+            h = 0.0440055 * safezoneH;
+            action = "closedialog 0; _nil=[] spawn {call SPAZ_SPAWN_W;};";
+        };
+        class spaz_sb5: RscButton
+        {
+            idc = 1604;
+            text = "CENTRAL"; //--- ToDo: Localize;
+            x = 0.618565 * safezoneW + safezoneX;
+            y = 0.588011 * safezoneH + safezoneY;
+            w = 0.0618602 * safezoneW;
+            h = 0.0440055 * safezoneH;
+            action = "closedialog 0; _nil=[] spawn {call SPAZ_SPAWN_C;};";
+        };
+        class spaz_sbr: RscButton
+        {
+            idc = 1605;
+            text = "RANDOM"; //--- ToDo: Localize;
+            x = 0.618565 * safezoneW + safezoneX;
+            y = 0.687023 * safezoneH + safezoneY;
+            w = 0.0618602 * safezoneW;
+            h = 0.0440055 * safezoneH;
+            action = "closedialog 0; _nil=[] spawn {call SPAZ_SPAWN_R;};";
+        };       
     };
 };
 

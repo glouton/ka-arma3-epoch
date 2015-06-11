@@ -2054,6 +2054,24 @@ class Mission
 		};
 	};
 
+	class Sensors {
+		class Item0
+		{
+			position[] = {8886.766,102.1,9097.741}; //respawn_west Location
+			a = 10;
+			b = 10;
+			activationBy = "ANY";
+			repeating = 1;
+			interruptable = 1;
+			age = "UNKNOWN";
+			name = "SPAWNPOINT";
+			expCond = "(player distance SPAWNPOINT) < 10;";
+			expActiv = "hint ""You are in the clone room""; inSpawnPoint = true;";
+			expDesactiv = "inSpawnPoint = false;";
+			class Effects{};
+		};
+	}
+	
 	class Markers
 	{
 		items = 3;
