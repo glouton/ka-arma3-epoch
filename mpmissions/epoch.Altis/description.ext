@@ -107,4 +107,4 @@ class RscTitles
 	#include "addons\Status_Bar\statusBar.hpp"
 };
 
-#include "addons\A3_Epoch_Spawn_Menu\spaz_spawn.hpp"
+#include "spaz_spawn.hpp"
