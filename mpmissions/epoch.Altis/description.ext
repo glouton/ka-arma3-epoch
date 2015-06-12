@@ -1,3 +1,5 @@
+#include "addons\spawn_menu\spaz_spawn.hpp"
+
 author = "Epoch Mod Team";
 class Header
 {
@@ -105,5 +107,4 @@ class CfgEpochAirDrop
 class RscTitles
 {
 	#include "addons\status_bar\statusBar.hpp"
-	#include "addons\spawn_menu\spaz_spawn.hpp"
 };
