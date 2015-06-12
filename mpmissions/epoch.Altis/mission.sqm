@@ -2053,25 +2053,6 @@ class Mission
 			init="this setObjectTexture [0, ""image.jpg""]";
 		};
 	};
-
-	class Sensors {
-		items = 1;
-		class Item0
-		{
-			position[] = {23600.611,3.19,18000.768}; // Altis clone room coords {23596.7,17998.2,0.233421} // coords from orginal script {8886.766,102.1,9097.741}; //respawn_west Location
-			a = 10;
-			b = 10;
-			activationBy = "ANY";
-			repeating = 1;
-			interruptable = 1;
-			age = "UNKNOWN";
-			name = "SPAWNPOINT";
-			expCond = "(player distance SPAWNPOINT) < 10;";
-			expActiv = "hint ""You are in the clone room""; inSpawnPoint = true;";
-			expDesactiv = "inSpawnPoint = false;";
-			class Effects{};
-		};
-	}
 	
 	class Markers
 	{
@@ -2093,6 +2074,25 @@ class Mission
 			position[] = {23600.611,3.19,18000.768};
 			name = "respawn_west";
 			type = "Empty";
+		};
+	};
+
+	class Sensors {
+		items = 1;
+		class Item0
+		{
+			position[] = {23600.611,3.19,18000.768}; // Use position[] of the respawn_west from class Markers lower in this file as it is the location of the clone room
+			a = 10;
+			b = 10;
+			activationBy = "ANY";
+			repeating = 1;
+			interruptable = 1;
+			age = "UNKNOWN";
+			name = "SPAWNPOINT";
+			expCond = "(player distance SPAWNPOINT) < 10;";
+			expActiv = "hint ""You are in the clone room""; inSpawnPoint = true;";
+			expDesactiv = "inSpawnPoint = false;";
+			class Effects{};
 		};
 	};
 };
