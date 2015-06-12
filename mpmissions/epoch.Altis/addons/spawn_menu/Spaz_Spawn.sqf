@@ -1,8 +1,8 @@
 
-Altis_Map		= "images\map1.jpg";
-Statis_Map		= "images\map2.jpg";
-Bornholm_Map	= "images\map3.jpg";
-Chernarus_Map	= "images\map4.jpg";
+Altis_Map		= "addons\spawn_menu\images\map1.jpg";
+Statis_Map		= "addons\spawn_menu\images\map2.jpg";
+Bornholm_Map	= "addons\spawn_menu\images\map3.jpg";
+Chernarus_Map	= "addons\spawn_menu\images\map4.jpg";
 
 Altis_Spawn_North 			= [10446.5,19923.6,0.00141907];
 Altis_Spawn_South 			= [20795.7,7257.58,0.00127983]; // Selakano
