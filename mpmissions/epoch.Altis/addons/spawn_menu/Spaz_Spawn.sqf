@@ -4,8 +4,8 @@ Statis_Map		= "addons\spawn_menu\images\map2.jpg";
 Bornholm_Map	= "addons\spawn_menu\images\map3.jpg";
 Chernarus_Map	= "addons\spawn_menu\images\map4.jpg";
 
-Altis_Spawn_North 			= [10446.5,19923.6,0.00141907];
-Altis_Spawn_South 			= [20795.7,7257.58,0.00127983]; // Selakano
+Altis_Spawn_North 			= [4751.54,20495.5,0.0014801];
+Altis_Spawn_South 			= [19431.6,9455.87,0.00196838]; // Panagia
 Altis_Spawn_East 			= [25312.5,21832,0.00128174]; // Sofia
 Altis_Spawn_West 			= [5475.37,11129.5,0.00218964]; // Panchori
 Altis_Spawn_Central 		= [14266.8,20776.5,0.00145721]; // Frini
