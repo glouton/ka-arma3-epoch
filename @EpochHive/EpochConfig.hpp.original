@@ -1,4 +1,4 @@
-serverRestart         = false; // true sends #shutdown command to server after the time specified in ForceRestartTime
+serverRestart         = true; // true sends #shutdown command to server after the time specified in ForceRestartTime
 forceRestartTime      = 21600; // 6 hour restarts
 
 StorageSlotsLimit = 1500; // Max storage slots allowed. Warning! Higher the number lower performance.
@@ -33,8 +33,8 @@ allowedVehiclesList[] = {
 
 // Boats
 
-{"C_Boat_Civil_01_EPOCH",6},
-{"C_Boat_Civil_01_rescue_EPOCH",6},
+{"C_Boat_Civil_01_EPOCH",4},
+{"C_Boat_Civil_01_rescue_EPOCH",4},
 {"jetski_epoch",3},
 {"B_SDV_01_EPOCH",3},
 
@@ -44,10 +44,10 @@ allowedVehiclesList[] = {
 
 // Cars
 
-{"C_Offroad_01_EPOCH",8},
-{"C_Hatchback_01_EPOCH",10},
-{"C_Hatchback_02_EPOCH",10},
-{"C_SUV_01_EPOCH",8},
+{"C_Offroad_01_EPOCH",6},
+{"C_Hatchback_01_EPOCH",6},
+{"C_Hatchback_02_EPOCH",6},
+{"C_SUV_01_EPOCH",6},
 
 // Vans
 
