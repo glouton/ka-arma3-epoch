@@ -3,8 +3,8 @@
 private ["_mapName"];
 private ["_markerNorthPos"];
 private ["_markerSouthPos"];
-private ["_markerSouthPos"];
-private ["_markerSouthPos"];
+private ["_markerEastPos"];
+private ["_markerWestPos"];
 private ["_markerCentralPos"];
 
 _mapName = toLower format ["%1", worldName];
