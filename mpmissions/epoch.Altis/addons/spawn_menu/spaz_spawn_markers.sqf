@@ -49,8 +49,8 @@ switch (_mapName) do {
 };
 
 _markerShape = "ICON";
-_markerType = "hd_flag";
-_markerColor = "ColorYellow";
+_markerType = "respawn_inf";
+_markerColor = "ColorRed";
 
 _markerNorth = createMarker ["MarkerNorth",_markerNorthPos];
 _markerNorth setMarkerShape _markerShape;
