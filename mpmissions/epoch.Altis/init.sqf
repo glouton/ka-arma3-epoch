@@ -4,7 +4,7 @@
 if(hasInterface) then{[] execVM "addons\status_bar\init_statusBar.sqf"};
 
 //  A3 Epoch Spawn Menu: Map Markers
-if(hasInterface) then{[] execVM "addons\spaz_spawn\spaz_spawn_markers.sqf"};
+if(hasInterface) then{[] execVM "addons\spawn_menu\spaz_spawn_markers.sqf"};
 
 // cmEarplugs
 call compile preProcessFileLineNumbers "addons\cmEarplugs\config.sqf";
