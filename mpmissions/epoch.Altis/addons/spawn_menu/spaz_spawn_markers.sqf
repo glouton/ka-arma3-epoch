@@ -49,29 +49,30 @@ switch (_mapName) do {
 };
 
 _markerShape = "ICON";
-_markerType = "hd_dot";
+_markerType = "hd_flag";
+_markerColor = "ColorYellow";
 
 _markerNorth = createMarker ["MarkerNorth",_markerNorthPos];
 _markerNorth setMarkerShape _markerShape;
 _markerNorth setMarkerType _markerType;
-"MarkerNorth" setMarkerColor "ColorRed";
+"MarkerNorth" setMarkerColor _markerColor;
 
 _markerSouth = createMarker ["MarkerSouth",_markerSouthPos];
 _markerSouth setMarkerShape _markerShape;
 _markerSouth setMarkerType _markerType;
-"MarkerSouth" setMarkerColor "ColorRed";
+"MarkerSouth" setMarkerColor _markerColor;
 
 _markerEast = createMarker ["MarkerEast",_markerEastPos];
 _markerEast setMarkerShape _markerShape;
 _markerEast setMarkerType _markerType;
-"MarkerEast" setMarkerColor "ColorRed";
+"MarkerEast" setMarkerColor _markerColor;
 
 _markerWest = createMarker ["MarkerWest",_markerWestPos];
 _markerWest setMarkerShape _markerShape;
 _markerWest setMarkerType _markerType;
-"MarkerWest" setMarkerColor "ColorRed";
+"MarkerWest" setMarkerColor _markerColor;
 
 _markerCentral = createMarker ["MarkerCentral",_markerCentralPos];
 _markerCentral setMarkerShape _markerShape;
 _markerCentral setMarkerType _markerType;
-"MarkerCentral" setMarkerColor "ColorRed";
+"MarkerCentral" setMarkerColor _markerColor;
