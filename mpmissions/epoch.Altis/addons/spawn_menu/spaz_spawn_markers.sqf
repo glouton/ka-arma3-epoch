@@ -1,15 +1,16 @@
 #include "spaz_spawn_coords.hpp"
 
-private ["_mapName"];
-private ["_markerNorthPos"];
-private ["_markerSouthPos"];
-private ["_markerEastPos"];
-private ["_markerWestPos"];
-private ["_markerCentralPos"];
+#define KA_SPAZ_SPAWN_MARKER_SHAPE		"ICON"
+#define KA_SPAZ_SPAWN_MARKER_TYPE		"respawn_inf"
+#define KA_SPAZ_SPAWN_MARKER_COLOR		"ColorRed"
 
-_mapName = toLower format ["%1", worldName];
+private [
+	"KA_SPAZ_SPAWN_MARKER_SHAPE", "KA_SPAZ_SPAWN_MARKER_TYPE", "KA_SPAZ_SPAWN_MARKER_COLOR",
+	"_markerNorthPos", "_markerSouthPos", "_markerEastPos", "_markerWestPos", "_markerCentralPos",
+	"_markerNorth", "_markerSouth", "_markerEast", "_markerWest", "_markerCentral"
+];
 
-switch (_mapName) do {
+switch (KA_SPAZ_SPAWN_MAP_NAME) do {
 	/* Arma 3 Maps */
 	case "altis":{
 		_markerNorthPos = Altis_Spawn_North;
@@ -48,31 +49,27 @@ switch (_mapName) do {
 	};
 };
 
-_markerShape = "ICON";
-_markerType = "respawn_inf";
-_markerColor = "ColorRed";
-
 _markerNorth = createMarker ["MarkerNorth",_markerNorthPos];
-_markerNorth setMarkerShape _markerShape;
-_markerNorth setMarkerType _markerType;
-"MarkerNorth" setMarkerColor _markerColor;
+_markerNorth setMarkerShape KA_SPAZ_SPAWN_MARKER_SHAPE;
+_markerNorth setMarkerType KA_SPAZ_SPAWN_MARKER_TYPE;
+"MarkerNorth" setMarkerColor KA_SPAZ_SPAWN_MARKER_COLOR;
 
 _markerSouth = createMarker ["MarkerSouth",_markerSouthPos];
-_markerSouth setMarkerShape _markerShape;
-_markerSouth setMarkerType _markerType;
-"MarkerSouth" setMarkerColor _markerColor;
+_markerSouth setMarkerShape KA_SPAZ_SPAWN_MARKER_SHAPE;
+_markerSouth setMarkerType KA_SPAZ_SPAWN_MARKER_TYPE;
+"MarkerSouth" setMarkerColor KA_SPAZ_SPAWN_MARKER_COLOR;
 
 _markerEast = createMarker ["MarkerEast",_markerEastPos];
-_markerEast setMarkerShape _markerShape;
-_markerEast setMarkerType _markerType;
-"MarkerEast" setMarkerColor _markerColor;
+_markerEast setMarkerShape KA_SPAZ_SPAWN_MARKER_SHAPE;
+_markerEast setMarkerType KA_SPAZ_SPAWN_MARKER_TYPE;
+"MarkerEast" setMarkerColor KA_SPAZ_SPAWN_MARKER_COLOR;
 
 _markerWest = createMarker ["MarkerWest",_markerWestPos];
-_markerWest setMarkerShape _markerShape;
-_markerWest setMarkerType _markerType;
-"MarkerWest" setMarkerColor _markerColor;
+_markerWest setMarkerShape KA_SPAZ_SPAWN_MARKER_SHAPE;
+_markerWest setMarkerType KA_SPAZ_SPAWN_MARKER_TYPE;
+"MarkerWest" setMarkerColor KA_SPAZ_SPAWN_MARKER_COLOR;
 
 _markerCentral = createMarker ["MarkerCentral",_markerCentralPos];
-_markerCentral setMarkerShape _markerShape;
-_markerCentral setMarkerType _markerType;
-"MarkerCentral" setMarkerColor _markerColor;
+_markerCentral setMarkerShape KA_SPAZ_SPAWN_MARKER_SHAPE;
+_markerCentral setMarkerType KA_SPAZ_SPAWN_MARKER_TYPE;
+"MarkerCentral" setMarkerColor KA_SPAZ_SPAWN_MARKER_COLOR;
