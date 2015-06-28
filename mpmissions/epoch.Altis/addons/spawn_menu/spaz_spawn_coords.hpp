@@ -2,6 +2,8 @@
 #ifndef SPAZ_SPAWN_COORDS_H
 #define SPAZ_SPAWN_COORDS_H
 
+#define KA_SPAZ_SPAWN_MAP_NAME			toLower format ["%1", worldName]
+
 #define Altis_Spawn_North 			[4751.54,20495.5,0.0014801]
 #define Altis_Spawn_South 			[19431.6,9455.87,0.00196838]
 #define Altis_Spawn_East 			[25312.5,21832,0.00128174]
