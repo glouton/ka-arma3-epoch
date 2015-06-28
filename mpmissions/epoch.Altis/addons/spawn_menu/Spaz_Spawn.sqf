@@ -40,11 +40,7 @@ Chernarus_Map	= "addons\spawn_menu\images\map4.jpg";
 
 disableSerialization;
 
-private ["_mapName"];
-
-_mapName = toLower format ["%1", worldName];
-
-switch (_mapName) do {
+switch (KA_SPAZ_SPAWN_MAP_NAME) do {
 	/* Arma 3 Maps */
 	case "altis":{((findDisplay 8332) displayCtrl 1200) ctrlSetText Altis_Map;};
 	case "stratis":{((findDisplay 8332) displayCtrl 1200) ctrlSetText Statis_Map;};
@@ -55,8 +51,7 @@ switch (_mapName) do {
 
 SPAZ_SPAWN_N = {
 
-	_mapName = toLower format ["%1", worldName];
-	switch (_mapName) do {
+	switch (KA_SPAZ_SPAWN_MAP_NAME) do {
 		case "altis":{player setPos Altis_Spawn_North,player setDir 0;};
 		case "stratis":{player setPos Statis_Spawn_North,player setDir 0;};
 		case "bornholm":{player setPos Bornholm_Spawn_North,player setDir 317.342;};
@@ -68,8 +63,7 @@ SPAZ_SPAWN_N = {
 };
 
 SPAZ_SPAWN_E = {
-	_mapName = toLower format ["%1", worldName];
-	switch (_mapName) do {
+	switch (KA_SPAZ_SPAWN_MAP_NAME) do {
 		case "altis":{player setPos Altis_Spawn_East,player setDir 0;};
 		case "stratis":{player setPos Statis_Spawn_East,player setDir 0;};
 		case "bornholm":{player setPos Bornholm_Spawn_East,player setDir 278.168;};
@@ -81,8 +75,7 @@ SPAZ_SPAWN_E = {
 };
 
 SPAZ_SPAWN_S = {
-	_mapName = toLower format ["%1", worldName];
-	switch (_mapName) do {
+	switch (KA_SPAZ_SPAWN_MAP_NAME) do {
 		case "altis":{player setPos Altis_Spawn_South,player setDir 0;};
 		case "stratis":{player setPos Stratis_Spawn_South,player setDir 0;};
 		case "bornholm":{player setPos Bornholm_Spawn_South,player setDir 43.1966;};
@@ -94,8 +87,7 @@ SPAZ_SPAWN_S = {
 };
 
 SPAZ_SPAWN_W = {
-	_mapName = toLower format ["%1", worldName];
-	switch (_mapName) do {
+	switch (KA_SPAZ_SPAWN_MAP_NAME) do {
 		case "altis":{player setPos Altis_Spawn_West,player setDir 0;};
 		case "stratis":{player setPos Stratis_Spawn_West,player setDir 0;};
 		case "bornholm":{player setPos Bornholm_Spawn_West,player setDir 124.737;};
@@ -107,8 +99,7 @@ SPAZ_SPAWN_W = {
 };
 
 SPAZ_SPAWN_C = {
-	_mapName = toLower format ["%1", worldName];
-	switch (_mapName) do {
+	switch (KA_SPAZ_SPAWN_MAP_NAME) do {
 		case "altis":{player setPos Altis_Spawn_Central,player setDir 0;};
 		case "stratis":{player setPos Stratis_Spawn_Central,player setDir 0;};
 		case "bornholm":{player setPos Bornholm_Spawn_Central,player setDir 317.342;};
