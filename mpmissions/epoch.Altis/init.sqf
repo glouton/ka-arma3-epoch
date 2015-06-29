@@ -19,5 +19,5 @@ if(hasInterface) then{
 	//  A3 Epoch Spawn Menu: Map Markers
 	[] execVM "addons\spawn_menu\spaz_spawn_markers.sqf";
 	// sem
-	execVM "semClient.sqf"
+	execVM "semClient.sqf";
 };
