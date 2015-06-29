@@ -5,7 +5,6 @@
 #define KA_SPAZ_SPAWN_MARKER_COLOR		"ColorRed"
 
 private [
-	"KA_SPAZ_SPAWN_MARKER_SHAPE", "KA_SPAZ_SPAWN_MARKER_TYPE", "KA_SPAZ_SPAWN_MARKER_COLOR",
 	"_markerNorthPos", "_markerSouthPos", "_markerEastPos", "_markerWestPos", "_markerCentralPos",
 	"_markerNorth", "_markerSouth", "_markerEast", "_markerWest", "_markerCentral"
 ];
