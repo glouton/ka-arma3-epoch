@@ -1,4 +1,4 @@
-serverRestart         = false; // true sends #shutdown command to server after the time specified in ForceRestartTime
+serverRestart         = true; // true sends #shutdown command to server after the time specified in ForceRestartTime
 forceRestartTime      = 21600; // 6 hour restarts
 
 StorageSlotsLimit = 1500; // Max storage slots allowed. Warning! Higher the number lower performance.
@@ -20,9 +20,9 @@ events[] = {
 };
 
 // Antagonists
-antagonistChanceTrash = 0.09; //9% chance when player loot a trash object
+antagonistChanceTrash = 0.20; //9% chance when player loot a trash object
 antagonistChancePDeath = 0.33; //33% chance when player was killed from a other player (selfkill doesn't count)
-antagonistChanceLoot = 0.09; //9% chance when player click "SEARCH" on a loot object
+antagonistChanceLoot = 0.20; //9% chance when player click "SEARCH" on a loot object
 
 // Player Related
 cloneCost = 100; // debt incurred on player death
@@ -45,8 +45,8 @@ allowedVehiclesList[] = {
 // Cars
 
 {"C_Offroad_01_EPOCH",8},
-{"C_Hatchback_01_EPOCH",10},
-{"C_Hatchback_02_EPOCH",10},
+{"C_Hatchback_01_EPOCH",8},
+{"C_Hatchback_02_EPOCH",8},
 {"C_SUV_01_EPOCH",8},
 
 // Vans
@@ -58,9 +58,9 @@ allowedVehiclesList[] = {
 
 // Military Wheeled
 
-{"B_MRAP_01_EPOCH",6},
-{"O_MRAP_02_F",6},
-{"I_MRAP_03_F",6},
+{"B_MRAP_01_EPOCH",8},
+{"O_MRAP_02_F",8},
+{"I_MRAP_03_F",8},
 
 // Military Trucks
 
@@ -77,27 +77,27 @@ allowedVehiclesList[] = {
 
 // Helicopters 
          
-{"B_Heli_Light_01_EPOCH",6},              //MH9 Hummingbird
+{"B_Heli_Light_01_EPOCH",8},              //MH9 Hummingbird
 {"I_Heli_Transport_02_EPOCH",4},          //Mohawk
-{"O_Heli_Transport_04_EPOCH",4},          //Taru Lift
-{"O_Heli_Transport_04_bench_EPOCH",1},    //Taru Bench
-{"O_Heli_Transport_04_box_EPOCH",1},      //Taru Transport
-{"O_Heli_Transport_04_covered_EPOCH",1},  //LB Wasp
-{"B_Heli_Transport_03_unarmed_EPOCH",4},  //Huron
+{"O_Heli_Transport_04_EPOCH",5},          //Taru Lift
+{"O_Heli_Transport_04_bench_EPOCH",3},    //Taru Bench
+{"O_Heli_Transport_04_box_EPOCH",3},      //Taru Transport
+{"O_Heli_Transport_04_covered_EPOCH",2},  //LB Wasp
+{"B_Heli_Transport_03_unarmed_EPOCH",2},  //Huron
 {"I_Heli_light_02_unarmed_F",2},          //Orca
-{"C_Heli_light_01_sheriff_F",1},          //LB Wasp
-{"C_Heli_light_01_furious_F",1},          //LB Wasp
-{"C_Heli_light_01_digital_F",1},          //LB Wasp
-{"C_Heli_light_01_speedy_F",1},           //LB Wasp
-{"C_Heli_light_01_speedy_F",1},           //LB Wasp
+{"C_Heli_light_01_sheriff_F",1},          //LB Sherrif
+{"C_Heli_light_01_furious_F",1},          //LB Furious
+{"C_Heli_light_01_digital_F",1},          //LB digital
+{"C_Heli_light_01_speedy_F",1},           //LB speedy
 {"C_Heli_light_01_wasp_F",2},             //LB Wasp
 {"mosquito_epoch",3},                     //Coffin
-
+{"B_Heli_Transport_01_F",4},             //Goshawk
+{"B_Heli_Transport_03_black_F",4},       //Huron Armed
 
 };
 
 // Traders
-taxRate = 1.5; // controls the price increase for purchases
+taxRate = 2.5; // controls the price increase for purchases
 starterTraderItems[] = { { "ItemSodaBurst", "meatballs_epoch", "MortarBucket", "CinderBlocks", "VehicleRepair", "CircuitParts", "ItemCorrugated", "PartPlankPack", "ItemRock", "ItemRope", "ItemStick" }, { 5, 5, 5, 10, 5, 5, 10, 5, 5, 5, 5 } }; // Starter Items for fresh spawned trader first array is classnames second is quantity.
 NPCSlotsLimit = 30; // Max number of traders static or dynamic. Warning! Higher the number lower performance.
 forceStaticTraders = true; // disables traders moving from work to home

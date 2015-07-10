@@ -18,6 +18,7 @@ if(hasInterface) then{
 	[] execVM "addons\status_bar\init_statusBar.sqf";
 	//  A3 Epoch Spawn Menu: Map Markers
 	[] execVM "addons\spawn_menu\spaz_spawn_markers.sqf";
+	[] execVM "drinkdamage.sqf"; 
 	// sem
 	execVM "semClient.sqf";
 };
