@@ -45,7 +45,7 @@
 7 assignItem !="axeVIP assignItem _item;"
 7 forceAddUniform
 7 removeAllMPEventHandlers
-7 setDamage !="_sapper setDamage 1;\n_sBomb setDamage 1;" !="_this setdamage 1;"
+7 setDamage !="_sapper setDamage 1;\n_sBomb setDamage 1;" !="_this setdamage 1;" !="player setDamage _damage;" !="player setDamage 1;"
 7 setDammage
 7 displaySetEventHandler
 7 ctrlSetEventHandler !"BIS_fnc_guiMessage_status"
