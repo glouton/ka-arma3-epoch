@@ -10,13 +10,13 @@ timeDifference = 0; // Server uses real time this will allow you to offset just 
 timeMultiplier = 3; // Sets a time multiplier for in-game time. The command range is now capped at 0.1 - 120 to avoid performance problems.
 lootMultiplier = 0.1; // 1 = max loot bias. This controls how much loot can payout per Epoch loot container.
 // Events
-WeatherChangeTime = 2400; // This controls how fast the weather changes as well as how fast shipping containers and earthquakes happen.
+WeatherChangeTime = 4800; // This controls how fast the weather changes as well as how fast shipping containers and earthquakes happen.
 WeatherStaticForecast[] = {75.5,0,{0,0,0},0,{5,5}}; // Default: {75.5,0,{0,0,0},0,{1,1}}; // Clear day; {19,1,{1,1,40},1,{5,5}}; // Cold Foggy Rainy Overcast Windy; Format: {temp <scalar>,rain <scalar>,fog <array>,overcast <scalar>,wind <array>} 
 events[] = {
     { 3600, "CarnivalSpawner" }, // SECOND <scalar>, EVENT <string>
     { 1200, "EarthQuake" },
     { 1200, "ContainerSpawner" },
-    { 300, "PlantSpawner" } //No comma on last Entry
+    { 3600, "PlantSpawner" } //No comma on last Entry
 };
 
 // Antagonists
@@ -91,8 +91,10 @@ allowedVehiclesList[] = {
 {"C_Heli_light_01_speedy_F",1},           //LB speedy
 {"C_Heli_light_01_wasp_F",2},             //LB Wasp
 {"mosquito_epoch",3},                     //Coffin
-{"B_Heli_Transport_01_F",4},             //Goshawk
 {"B_Heli_Transport_03_black_F",4},       //Huron Armed
+{"B_Heli_Attack_01_F",4},                //Blackfoot Armed
+{"B_Heli_Transport_01_F",4},            //Ghosthawk Armed
+
 
 };
 
