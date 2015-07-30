@@ -1,4 +1,5 @@
 // cmEarplugs
+/*
 5 fadeSound 1;
 earplugsout = true;
 removeAllActions inCaseofDeath;
@@ -9,3 +10,4 @@ player setVariable ["Has_EPEH_Loop", "Yep"];
 systemChat "Diablo's minions grow stronger...";
 
 (findDisplay 46) displayRemoveEventHandler ["KeyDown", cmKeyPress];
+*/
