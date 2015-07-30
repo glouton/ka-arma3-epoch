@@ -17,6 +17,7 @@
 7 assignAs !="assignAsCargo" !="_unit assignAsGunner _axeCopter;" !="_driver assignAsDriver _axeCopter;" !="axeVIP assignAsDriver vehicle axeVIP;"
 7 assignAsCargo !="_x assignAsCargo axeGeneralsBoat;" !="axeVIP assignAsCargo vehicle player;" !="axeVIP assignAsCargo vehicle axeVIP;"
 7 allowDamage !="_unit allowDamage false;" !="_unit allowDamage true;" !="player allowDamage true;" !="vehicle player allowDamage true;" !="player allowDamage false;"
+7 !"addons\status_bar\init_statusBar.sqf" !="[] execVM "addons\spawn_menu\Spaz_Spawn.sqf";" !="[] execVM "addons\spawn_menu\spaz_spawn_markers.sqf";"
 7 addWeaponCargo !="_acceptHolder addWeaponCargo [_wWeapon, 1] ;"
 7 onMapSingleClick !="onMapSingleClick '';"
 7 addMagazine !"addMagazineCargo" !="player addMagazine _craftItem;" !="player addMagazine \"jerrycanE_epoch\";" !="player addMagazine \"emptyjar_epoch\";" !="player addMagazine \"jerrycan_epoch\";" !="player addMagazine \"Hatchet_swing\";" !="player addMagazine [(_x select 0),(_x select 1)]" !="player addMagazine _x;" !="if !(player canAdd (_x select 0)) exitWith {};\nplayer addMagazine[_x select 0, _x select 1];"
@@ -25,7 +26,7 @@
 7 addBackPack
 7 removeAllWeapons !="removeAllWeapons axeGeneral;"
 7 removeAllItems
-7 removeAllActions
+7 removeAllActions !"onplayerkilled.sqf"
 7 setViewDistance !"setViewDistance 1600"
 7 createGroup !="_grp = createGroup RESISTANCE;" !="if (isserver) then {\n_group = creategroup sidelogic;" !="grpVIPGeneral = createGroup RESISTANCE;" !="_grp = createGroup side _plyr;" !="_grp = createGroup side player;" !="_grp = createGroup _side;" !="_grp = createGroup (side _plyr);" !="createcenter sidelogic;\n_grpLogic = creategroup sidelogic;\nbis_functions_mainscope"
 7 createVehicleCrew
@@ -33,10 +34,10 @@
 7 createUnit !="_unit = _grp createUnit[(_arrUnits select _i), _pos, [], 0, \"FORM\"];" !="_driver = _grp createUnit[\"I_UAV_AI\", position _unit, [], 0, \"CAN_COLLIDE\"];" !="axeGeneral = grpVIPGeneral createUnit ["I_officer_F", axeGeneralPos, [], 1, "CAN_COLLIDE"];"
 7 createAgent !="_unit = createAgent[_unitClass, _targetPos, [], 256, \"FORM\"];" !="_unit = createAgent [_unitClass, _targetPos, [], 120, \"FORM\"];" !="_animal = createAgent[_randomAIClass, _animalPos, [], 5, \"NONE\"];" !="_unit = createAgent [\"Epoch_Cloak_F\", _pos, [], 0, \"CAN_COLLIDE\"];" !="_unit = createAgent [\"Epoch_Sapper_F\", _targetPos, [], 180, \"FORM\"];" !="_sapper = createAgent ["Epoch_Sapper_F", getPos _cage2, [], 0, "FORM"];"
 7 createTeam
-7 createDialog !="createDialog \"QuickTake\";" !="createDialog \"InteractBank\";" !="createdialog \"SelectGender\";" !="_handled = createdialog _dialog;" !="if !(createdialog \"InteractItem\") exitWith {};" !="createDialog \"TapOut\";" !="if !(createdialog \"Trade\") exitWith {};" !="_ok = createdialog \"Interact\";" !="_ok = createdialog \"TradeNPCMenu\";" !="createDialog \"Epoch_myGroup\";" !="createDialog (if ((Epoch_my_GroupUID == \"\") && (Epoch_my_Group isEqualTo [])) then {\"EPOCH_createGrp\"} else {\"Epoch_myGroup\"});" !="createDialog \"GroupRequests\";" !="_ok = createdialog \"MissionSelect\";" !="createDialog 'Skaronator_AdminMenu';"
-7 deleteMarker
-7 setMarker
-7 createMarker
+7 createDialog !="createDialog \"QuickTake\";" !="createDialog \"InteractBank\";" !="createdialog \"SelectGender\";" !="_handled = createdialog _dialog;" !="if !(createdialog \"InteractItem\") exitWith {};" !="createDialog \"TapOut\";" !="if !(createdialog \"Trade\") exitWith {};" !="_ok = createdialog \"Interact\";" !="_ok = createdialog \"TradeNPCMenu\";" !="createDialog \"Epoch_myGroup\";" !="createDialog (if ((Epoch_my_GroupUID == \"\") && (Epoch_my_Group isEqualTo [])) then {\"EPOCH_createGrp\"} else {\"Epoch_myGroup\"});" !="createDialog \"GroupRequests\";" !="_ok = createdialog \"MissionSelect\";" !="createDialog 'Skaronator_AdminMenu';" !"createdialog \"spaz_spawn\";"
+7 deleteMarker !="deleteMarkerLocal format[\"SEM_MissionMarker" !"deletemarkerlocal"
+7 setMarker !="Local" !="MarkerNorth" !="MarkerSouth" !="MarkerEast" !="MarkerWest" !="MarkerCentral"
+7 createMarker !="createMarkerLocal [format[\"SEM_MissionMarker" !"createmarkerlocal" !="MarkerNorth" !="MarkerSouth" !="MarkerEast" !="MarkerWest" !="MarkerCentral"
 7 assignItem !="axeVIP assignItem _item;"
 7 forceAddUniform
 7 removeAllMPEventHandlers
@@ -46,13 +47,13 @@
 7 ctrlSetEventHandler !"BIS_fnc_guiMessage_status" !"ctrlSetEventHandler ['LBDblClick', '_this call" !="_buttonRespawn ctrlseteventhandler [\"buttonclick\",\"with uinamespace do {['buttonRespawn',"
 7 addMPEventHandler
 7 addEventHandler !"displayAddEventHandler" !"ctrlAddEventHandler" !"FiredNear" !"EpeContactStart" !"InventoryClosed" !"GetOut" !"InventoryOpened" !"local" !"Respawn" !"Put" !"Take" !"Fired" !"Killed" !" [\"PostReset\",{BIS_EnginePPReset = true;} ];" !"_logic addeventhandler [\n\"local\""
-7 displayAddEventHandler !"[_display] call _fnc_animate;" !"tVersion select 4) == \"Development\") then" !"_display displayaddeventhandler\n[\n\"mousemoving\"," !"(findDisplay 46) displayAddEventHandler [\"KeyDown\",\"true\"];" !"(findDisplay 46) displayAddEventHandler [\"KeyDown\",\"_this call EPOCH_KeyDown\"];" !="_addCase = _display46 displayAddEventHandler ['KeyDown',{_this call EPOCH_KeyDown;}];" !"_display displayaddeventhandler [\"unload\",\"uinamespace setvariable ['BIS_fnc_guiMess" !="findDisplay -1337 displayAddEventHandler ['Unload'"
+7 displayAddEventHandler !"[_display] call _fnc_animate;" !"tVersion select 4) == \"Development\") then" !"_display displayaddeventhandler\n[\n\"mousemoving\"," !"(findDisplay 46) displayAddEventHandler [\"KeyDown\",\"true\"];" !"(findDisplay 46) displayAddEventHandler [\"KeyDown\",\"_this call EPOCH_KeyDown\"];" !="_addCase = _display46 displayAddEventHandler ['KeyDown',{_this call EPOCH_KeyDown;}];" !"_display displayaddeventhandler [\"unload\",\"uinamespace setvariable ['BIS_fnc_guiMess" !="findDisplay -1337 displayAddEventHandler ['Unload'" !"EP_LOOP" !"cmKeyPress" !"(findDisplay 8332) displayAddEventHandler [\"KeyDown\",\"true\"];" !"cmKeyPress"
 7 ctrlAddEventHandler !"rCfg >> \"refreshDelay\");" !" [\n\"draw\"," !" [\"buttonclick\"," !="(uiNamespace getVariable 'ESP_map') ctrlAddEventHandler['Draw', '_esp_targets = EPOCH_ESPMAP_TARGETS;" !="ctrlAddEventHandler ['MouseButtonDown'" !="(_display displayctrl _idc) ctrlAddEventHandler [\"LBSelChanged\","
-7 removeAllEventHandlers !="ctrlRemoveAllEventHandlers" !="_vehicle removeAllEventHandlers \"GetOut\";" !="_sapper removeAllEventHandlers \"Hit\";\n_sapper removeAllEventHandlers \"FiredNear\";" !="_display46 displayRemoveAllEventHandlers 'KeyDown';"
+7 removeAllEventHandlers !="ctrlRemoveAllEventHandlers" !="_vehicle removeAllEventHandlers \"GetOut\";" !="_sapper removeAllEventHandlers \"Hit\";\n_sapper removeAllEventHandlers \"FiredNear\";" !="_display46 displayRemoveAllEventHandlers 'KeyDown';" !"cmKeyPress"
 7 removeAllMissionEventHandlers
 7 ctrlRemoveAllEventHandlers !="(uiNamespace getVariable 'ESP_map') ctrlRemoveAllEventHandlers 'Draw';" !="ctrlAddEventHandler ['MouseButtonDown'"
 7 removeEventHandler !="displayRemoveEventHandler" !="player removeEventHandler ['Fired', 0];" !"_currentTarget removeEventHandler[\"EpeContactStart\", _onContactEH]" !" [_adminVar,objnull];\npublicvariable _adminVar;\nplayer removeeventhandler [\"respawn\",_respawn];" !="_plyr removeEventHandler [\"FiredNear\", _smokeEH];" !="player removeEventHandler [_ehKey, 0];"
-7 displayRemoveEventHandler !"BIS_fnc_guiMessage_status"
+7 displayRemoveEventHandler !"BIS_fnc_guiMessage_status" !"cmKeyPress"
 7 switchCamera !="{if (cameraOn != vehicle player) then { vehicle player switchCamera 'External' } };"
 7 remoteControl !"fn_moduleRemoteControl.sqf" !="\"BIS_fnc_moduleRemoteControl"\"
 7 drawIcon3D !="drawIcon3D[\"\x\addons\a3_epoch_code\Data\Member.paa\",_color,_pos,1,1,0,_text,1,0.025,\"PuristaMedium\"];\n}forEach EPOCH_ESP_TARGETS;" !"drawIcon3D[format[\"\x\addons\a3_epoch_code\Data\UI\loading_bar_%1.paa\",_stability],_color,(getPosATL EPOCH_stabilityTarget),5,5,0,\"\",1,0.05,\"PuristaMedium\"];" !"drawIcon3D[format[\"\x\addons\a3_epoch_code\Data\UI\loading_bar_%1.paa\",_num],_color,_pos,4,4,0,\"\",1,0.05,\"PuristaMedium\"];" !"EPOCH_drawIcon3dStability" !"EPOCH_drawIcon3d" !"if (_condition) then {\ndrawIcon3D [_icon, _color, _position, _sizeX, _sizeY, _angle, _text," !="drawIcon3D [\"\A3\UI_F_MP_Mark\Data\Tasks\Misc\background.paa\""
