@@ -15,12 +15,12 @@ antihack_checkFiles[] = { //script check, leave it blank to disable it
 	{"\x\addons\a3_epoch_code\compile\setup\EPOCH_clientRespawn.sqf", "EPOCH_clientRespawn"},
 	{"\x\addons\a3_epoch_code\compile\interface_event_handlers\EPOCH_KeyDown.sqf", "EPOCH_KeyDown"}
 };
-antihack_addActionCheck = true; // false to diable addAction checks
+antihack_addActionCheck = true; // false to disable addAction checks
 antihack_customVariablesCheck = false; // true enables variable scanning on missionNamespace
 antihack_customVariables[] = {}; //Add global variables from custom scripts, example: {"MyOwnVar","CP_KK"} //Global Variables begin without "_" !!
 antihack_customVariablesCheckMode = 0; // 0 = Ban, 1 = Log, 2 == learning mode (only enable with trusted players in a passwored server to profile your variables keep disabled for normal operation)
 
-adminMenu_Owner[] = {{"76561197994145602","GTXADMIN1"},{"76561197960437937","GTXADMIN2"},{"76561198072254600","GTXADMIN3"},{"0","Enter Name Here1"},{"0","Enter Name Here2"},{"0","Enter Name Here3"},{"0","Enter Name Here4"},{"0","Enter Name Here5"}};
+adminMenu_Owner[] = {{"76561197994145602","GTXADMIN1"},{"76561197960437937","GTXADMIN2"},{"76561198072254600","GTXADMIN3"},{"76561198061079493","Bud"},{"0","Enter Name Here2"},{"0","Enter Name Here3"},{"0","Enter Name Here4"},{"0","Enter Name Here5"}};
 adminMenu_OwnerSetting[] = {
 	"ESP-PLAYER",
 	"ESP-VEHICLE",
