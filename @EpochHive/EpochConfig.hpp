@@ -1,36 +1,39 @@
 serverRestart         = true; // true sends #shutdown command to server after the time specified in ForceRestartTime
-forceRestartTime      = 21600; // 6 hour restarts
+forceRestartTime      = 21600; // 4 hour restarts
 
 StorageSlotsLimit = 1500; // Max storage slots allowed. Warning! Higher the number lower performance.
 BuildingSlotsLimit = 1500; // Max building slots allowed. Warning! Higher the number lower performance.
 
 // Time based
-StaticDateTime[] = {0,0,0,3,0}; // {0,0,0,8,0} would forces the server to start at 8am each time it is started while allowing the year, month and day to stay real time. Any values left at 0 will result in no change.
+StaticDateTime[] = {2035,6,10,7,0}; // {0,0,0,8,0} would forces the server to start at 8am each time it is started while allowing the year, month and day to stay real time. Any values left at 0 will result in no change.
 timeDifference = 0; // Server uses real time this will allow you to offset just the hour.
-timeMultiplier = 3; // Sets a time multiplier for in-game time. The command range is now capped at 0.1 - 120 to avoid performance problems.
-lootMultiplier = 0.1; // 1 = max loot bias. This controls how much loot can payout per Epoch loot container.
+timeMultiplier = 8; // Sets a time multiplier for in-game time. The command range is now capped at 0.1 - 120 to avoid performance problems.
+lootMultiplier = 0.5; // 1 = max loot bias. This controls how much loot can payout per Epoch loot container.
 // Events
-WeatherChangeTime = 4800; // This controls how fast the weather changes as well as how fast shipping containers and earthquakes happen.
-WeatherStaticForecast[] = {75.5,0,{0,0,0},0,{5,5}}; // Default: {75.5,0,{0,0,0},0,{1,1}}; // Clear day; {19,1,{1,1,40},1,{5,5}}; // Cold Foggy Rainy Overcast Windy; Format: {temp <scalar>,rain <scalar>,fog <array>,overcast <scalar>,wind <array>} 
+airDrops = false; // TBA
+WeatherChangeTime = 1200; // This controls how fast the weather changes as well as how fast shipping containers and earthquakes happen.
+WeatherStaticForecast[] = {}; // Default: {75.5,0,{0,0,0},0,{1,1}}; // Clear day; {19,1,{1,1,40},1,{5,5}}; // Cold Foggy Rainy Overcast Windy; Format: {temp <scalar>,rain <scalar>,fog <array>,overcast <scalar>,wind <array>}
 events[] = {
     { 3600, "CarnivalSpawner" }, // SECOND <scalar>, EVENT <string>
-    { 1200, "EarthQuake" },
+    { 2400, "EarthQuake" },
+    { 1800, "ChangeWeather" },
     { 1200, "ContainerSpawner" },
-    { 3600, "PlantSpawner" } //No comma on last Entry
+    { 300, "PlantSpawner" } //No comma on last Entry
 };
 
 // Antagonists
-antagonistChanceTrash = 0.20; //9% chance when player loot a trash object
+antagonistChanceTrash = 0.09; //9% chance when player loot a trash object
 antagonistChancePDeath = 0.33; //33% chance when player was killed from a other player (selfkill doesn't count)
-antagonistChanceLoot = 0.20; //9% chance when player click "SEARCH" on a loot object
+antagonistChanceLoot = 0.09; //9% chance when player click "SEARCH" on a loot object
 
 // Player Related
 cloneCost = 100; // debt incurred on player death
 
 // vehicles - Max vehicle slots is calculated from per vehicle limits below. Warning! Higher the number lower the performance.
-vehicleLockTime = 7200; // Controls how many seconds it takes to allow another person/group to unlock vehicle.
+simulationHandler = false; // When enabled this feature disables simulation on vehicles that are not near players. Can help improve client fps at the cost of server fps. (This is disabled by default now that Arma has fixed the original issue)
+vehicleLockTime = 1800; // Controls how many seconds it takes to allow another person/group to unlock vehicle.
 allowedVehiclesList[] = {
-
+   
 // Boats
 
 {"C_Boat_Civil_01_EPOCH",6},
@@ -48,6 +51,7 @@ allowedVehiclesList[] = {
 {"C_Hatchback_01_EPOCH",8},
 {"C_Hatchback_02_EPOCH",8},
 {"C_SUV_01_EPOCH",8},
+{"B_G_Offroad_01_armed_F",8},
 
 // Vans
 
@@ -90,17 +94,16 @@ allowedVehiclesList[] = {
 {"C_Heli_light_01_digital_F",1},          //LB digital
 {"C_Heli_light_01_speedy_F",1},           //LB speedy
 {"C_Heli_light_01_wasp_F",2},             //LB Wasp
-{"mosquito_epoch",3},                     //Coffin
+{"mosquito_epoch",4},                     //Coffin
 {"B_Heli_Transport_03_black_F",4},       //Huron Armed
-{"B_Heli_Attack_01_F",4},                //Blackfoot Armed
-{"B_Heli_Transport_01_F",4},            //Ghosthawk Armed
-
+{"B_Heli_Transport_01_camo_F",4},        //Ghosthawk Armed
+{"C_Heli_Light_01_civil_EPOCH",5}        //new LB
 
 };
 
 // Traders
 taxRate = 2.5; // controls the price increase for purchases
-starterTraderItems[] = { { "ItemSodaBurst", "meatballs_epoch", "MortarBucket", "CinderBlocks", "VehicleRepair", "CircuitParts", "ItemCorrugated", "PartPlankPack", "ItemRock", "ItemRope", "ItemStick" }, { 5, 5, 5, 10, 5, 5, 10, 5, 5, 5, 5 } }; // Starter Items for fresh spawned trader first array is classnames second is quantity.
+starterTraderItems[] = { { "ItemSodaBurst", "meatballs_epoch", "MortarBucket", "CinderBlocks", "VehicleRepair", "CircuitParts", "ItemCorrugated", "PartPlankPack", "ItemRock", "ItemRope", "ItemStick" }, { 5, 5, 5, 10, 5, 5, 10, 5, 5, 5, 5} }; // Starter Items for fresh spawned trader first array is classnames second is quantity.
 NPCSlotsLimit = 30; // Max number of traders static or dynamic. Warning! Higher the number lower performance.
 forceStaticTraders = true; // disables traders moving from work to home
 
@@ -108,8 +111,8 @@ forceStaticTraders = true; // disables traders moving from work to home
 showEarthQuakes = true; // show mineral viens caused by earthquakes
 showShippingContainers = false; // Show location of events based loots (plants, shipping container, Carnival)
 SHOW_TRADERS = true; // Show locations of traders
-SHOW_JAMMERS = false; // Shows location of base jammers 
-SHOW_BOATLOOT = true; // Shows the location of shipwreck loot 
+SHOW_JAMMERS = false; // Shows location of base jammers
+SHOW_BOATLOOT = true; // Shows the location of shipwreck loot
 DEBUG_VEH = false; // DEBUG ONLY used to debug spawing of vehicles
 
 // Hive Related
