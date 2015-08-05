@@ -44,12 +44,5 @@ if (cmEarplugsKeyPressEnabled) then {
 };
 */
 
-// A3 Epoch Spawn Menu
-if (isNil "inSpawnPoint") then 
-{
-	inSpawnPoint = false;
-};
-waitUntil { inSpawnPoint };
-createDialog "spaz_spawn";
-[] execVM "addons\spawn_menu\Spaz_Spawn.sqf";
-//noesckey = (findDisplay 8332) displayAddEventHandler ["KeyDown", "if ((_this select 1) == 1) then { true }"];
+// Spawn Menu
+//[] execVM "addons\spawn_menu\Spaz_Spawn.sqf";

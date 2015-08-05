@@ -2029,20 +2029,32 @@ class Mission
 			};
 		};
 	};
-	// For Spawn Menu
+	// Custom image in the clone room
+	// Phone booth for spawn menu
 	class Vehicles
 	{
-		items=1;
+		items=2;
 		class Item0
 		{
-			position[]={23600.611,2.8548489,17990.768}; // For Altis us {23600.611,2.8548489,17990.768}
-			azimut=180.4026;
-			offsetY=5;
-			id=1;
-			side="EMPTY";
-			vehicle="UserTexture10m_F";
-			skill=0.60000002;
-			init="this setObjectTexture [0, ""image.jpg""]";
+			position[] = {23600.611,2.8548489,17990.768};
+			azimut = 180.4026;
+			offsetY = 5;
+			id = 1;
+			side = "EMPTY";
+			vehicle = "UserTexture10m_F";
+			skill = 0.60000002;
+			init = "this setObjectTexture [0, ""image.jpg""]";
+		};
+		class Item1
+		{
+			position[] = {23600.611,0.233421,17995.768};
+			name = "spawn_menu_phone_booth";
+			azimut = 180.4026;
+			id = 2;
+			side = "EMPTY";
+			vehicle = "Land_PhoneBooth_02_F";
+			skill = 0.60000002;
+			init = "this addaction [""Spawn Menu"", ""addons\spawn_menu\init.sqf""]";
 		};
 	};
 	class Markers
@@ -2065,25 +2077,6 @@ class Mission
 			position[] = {23600.611,3.19,18000.768};
 			name = "respawn_west";
 			type = "Empty";
-		};
-	};
-	// For Spawn Menu
-	class Sensors {
-		items = 1;
-		class Item0
-		{
-			position[] = {23600.611,3.19,18000.768}; // Use position[] of the respawn_west from class Markers just above as it is the location of the clone room
-			a = 10;
-			b = 10;
-			activationBy = "ANY";
-			repeating = 1;
-			interruptable = 1;
-			age = "UNKNOWN";
-			name = "SPAWNPOINT";
-			expCond = "(player distance SPAWNPOINT) < 10;";
-			expActiv = "hint ""You are in the clone room""; inSpawnPoint = true;";
-			expDesactiv = "inSpawnPoint = false;";
-			class Effects{};
 		};
 	};
 };
