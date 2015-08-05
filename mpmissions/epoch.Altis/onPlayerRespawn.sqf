@@ -45,4 +45,4 @@ if (cmEarplugsKeyPressEnabled) then {
 */
 
 // Spawn Menu
-[] execVM "addons\spawn_menu\Spaz_Spawn.sqf";
+//[] execVM "addons\spawn_menu\Spaz_Spawn.sqf";

@@ -2054,7 +2054,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_PhoneBooth_02_F";
 			skill=0.60000002;
-			init="this addaction ["Spawn Menu", "createDialog "spaz_spawn""]";
+			init="this addaction ["Spawn Menu", "createDialog "spaz_spawn"; [] execVM "addons\spawn_menu\Spaz_Spawn.sqf";"]";
 		};
 	};
 	class Markers
