@@ -59,7 +59,6 @@ SPAZ_SPAWN_N = {
 		default {player setPos Bornholm_Spawn_North,player setDir 317.342;};
 	};
 	cutText ["","BLACK IN"];
-	(findDisplay 8332) displayRemoveEventHandler ["KeyDown", noesckey];
 };
 
 SPAZ_SPAWN_E = {
@@ -71,7 +70,6 @@ SPAZ_SPAWN_E = {
 		default {player setPos Bornholm_Spawn_East,player setDir 278.168;};
 	};
 	cutText ["","BLACK IN"];
-	(findDisplay 8332) displayRemoveEventHandler ["KeyDown", noesckey];
 };
 
 SPAZ_SPAWN_S = {
@@ -83,7 +81,6 @@ SPAZ_SPAWN_S = {
 		default {player setPos Bornholm_Spawn_South,player setDir 43.1966;};
 	};
 	cutText ["","BLACK IN"];
-	(findDisplay 8332) displayRemoveEventHandler ["KeyDown", noesckey];
 };
 
 SPAZ_SPAWN_W = {
@@ -95,7 +92,6 @@ SPAZ_SPAWN_W = {
 		default {player setPos Bornholm_Spawn_West,player setDir 124.737;};
 	};
 	cutText ["","BLACK IN"];
-	(findDisplay 8332) displayRemoveEventHandler ["KeyDown", noesckey];
 };
 
 SPAZ_SPAWN_C = {
@@ -107,7 +103,6 @@ SPAZ_SPAWN_C = {
 		default {player setPos Bornholm_Spawn_Central,player setDir 317.342;};
 	};
 	cutText ["","BLACK IN"];
-	(findDisplay 8332) displayRemoveEventHandler ["KeyDown", noesckey];
 };
 
 SPAZ_SPAWN_R = {
@@ -132,7 +127,6 @@ SPAZ_SPAWN_R = {
 			waitUntil { !inSpawnPoint };
 			cutText ["","BLACK IN"];
 			titleText [format["Good Luck"],"PLAIN DOWN"]; titleFadeOut 4;
-			(findDisplay 8332) displayRemoveEventHandler ["KeyDown", noesckey];		 
 		};
 	};	
 };
