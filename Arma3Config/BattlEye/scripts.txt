@@ -35,8 +35,9 @@
 7 createAgent !="_unit = createAgent[_unitClass, _targetPos, [], 256, \"FORM\"];" !="_unit = createAgent [_unitClass, _targetPos, [], 120, \"FORM\"];" !="_animal = createAgent[_randomAIClass, _animalPos, [], 5, \"NONE\"];" !="_unit = createAgent [\"Epoch_Cloak_F\", _pos, [], 0, \"CAN_COLLIDE\"];" !="_unit = createAgent [\"Epoch_Sapper_F\", _targetPos, [], 180, \"FORM\"];" !="_sapper = createAgent ["Epoch_Sapper_F", getPos _cage2, [], 0, "FORM"];"
 7 createTeam
 7 createDialog !="createDialog \"QuickTake\";" !="createDialog \"InteractBank\";" !="createdialog \"SelectGender\";" !="_handled = createdialog _dialog;" !="if !(createdialog \"InteractItem\") exitWith {};" !="createDialog \"TapOut\";" !="if !(createdialog \"Trade\") exitWith {};" !="_ok = createdialog \"Interact\";" !="_ok = createdialog \"TradeNPCMenu\";" !="createDialog \"Epoch_myGroup\";" !="createDialog (if ((Epoch_my_GroupUID == \"\") && (Epoch_my_Group isEqualTo [])) then {\"EPOCH_createGrp\"} else {\"Epoch_myGroup\"});" !="createDialog \"GroupRequests\";" !="_ok = createdialog \"MissionSelect\";" !="createDialog 'Skaronator_AdminMenu';" !"createdialog \"spaz_spawn\";"
-7 setMarker
-7 createMarker
+7 deleteMarker !="deleteMarkerLocal format[\"SEM_MissionMarker" !"deletemarkerlocal"
+7 setMarker !="Local" !="MarkerNorth" !="MarkerSouth" !="MarkerEast" !="MarkerWest" !="MarkerCentral"
+7 createMarker !="createMarkerLocal [format[\"SEM_MissionMarker" !"createmarkerlocal" !="MarkerNorth" !="MarkerSouth" !="MarkerEast" !="MarkerWest" !="MarkerCentral"
 7 assignItem !="axeVIP assignItem _item;"
 7 forceAddUniform
 7 removeAllMPEventHandlers
