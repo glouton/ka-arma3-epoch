@@ -1,14 +1,14 @@
 serverRestart         = true; // true sends #shutdown command to server after the time specified in ForceRestartTime
-forceRestartTime      = 21600; // 4 hour restarts
+forceRestartTime      = 21600; // 6 hour restarts
 
 StorageSlotsLimit = 1500; // Max storage slots allowed. Warning! Higher the number lower performance.
 BuildingSlotsLimit = 1500; // Max building slots allowed. Warning! Higher the number lower performance.
 
 // Time based
-StaticDateTime[] = {2035,6,10,7,0}; // {0,0,0,8,0} would forces the server to start at 8am each time it is started while allowing the year, month and day to stay real time. Any values left at 0 will result in no change.
+StaticDateTime[] = {0,0,0,4,0}; // {0,0,0,7,0} would forces the server to start at 8am each time it is started while allowing the year, month and day to stay real time. Any values left at 0 will result in no change.
 timeDifference = 0; // Server uses real time this will allow you to offset just the hour.
-timeMultiplier = 8; // Sets a time multiplier for in-game time. The command range is now capped at 0.1 - 120 to avoid performance problems.
-lootMultiplier = 0.5; // 1 = max loot bias. This controls how much loot can payout per Epoch loot container.
+timeMultiplier = 12; // Sets a time multiplier for in-game time. The command range is now capped at 0.1 - 120 to avoid performance problems.
+lootMultiplier = 0.1; // 1 = max loot bias. This controls how much loot can payout per Epoch loot container.
 // Events
 airDrops = false; // TBA
 WeatherChangeTime = 1200; // This controls how fast the weather changes as well as how fast shipping containers and earthquakes happen.
@@ -31,13 +31,13 @@ cloneCost = 100; // debt incurred on player death
 
 // vehicles - Max vehicle slots is calculated from per vehicle limits below. Warning! Higher the number lower the performance.
 simulationHandler = false; // When enabled this feature disables simulation on vehicles that are not near players. Can help improve client fps at the cost of server fps. (This is disabled by default now that Arma has fixed the original issue)
-vehicleLockTime = 1800; // Controls how many seconds it takes to allow another person/group to unlock vehicle.
+vehicleLockTime = 3600; // Controls how many seconds it takes to allow another person/group to unlock vehicle.
 allowedVehiclesList[] = {
    
 // Boats
 
-{"C_Boat_Civil_01_EPOCH",6},
-{"C_Boat_Civil_01_rescue_EPOCH",6},
+{"C_Boat_Civil_01_EPOCH",4},
+{"C_Boat_Civil_01_rescue_EPOCH",4},
 {"jetski_epoch",3},
 {"B_SDV_01_EPOCH",3},
 
@@ -47,63 +47,50 @@ allowedVehiclesList[] = {
 
 // Cars
 
-{"C_Offroad_01_EPOCH",8},
-{"C_Hatchback_01_EPOCH",8},
-{"C_Hatchback_02_EPOCH",8},
-{"C_SUV_01_EPOCH",8},
-{"B_G_Offroad_01_armed_F",8},
+{"C_Offroad_01_EPOCH",6},
+{"C_Hatchback_01_EPOCH",4},
+{"C_Hatchback_02_EPOCH",4},
+{"C_SUV_01_EPOCH",6},
+{"B_G_Offroad_01_armed_F",6},
 
 // Vans
 
-{"C_Van_01_box_EPOCH",6},
-{"C_Van_01_transport_EPOCH",6},
-{"B_G_Van_01_fuel_F",3},
-{"I_Truck_02_fuel_F",3},
-
-// Military Wheeled
-
-{"B_MRAP_01_EPOCH",8},
-{"O_MRAP_02_F",8},
-{"I_MRAP_03_F",8},
+{"C_Van_01_box_EPOCH",5},
+{"C_Van_01_transport_EPOCH",5},
 
 // Military Trucks
 
-{"B_Truck_01_transport_EPOCH",1},
-{"B_Truck_01_covered_EPOCH",1},
-{"B_Truck_01_mover_EPOCH",1},
-{"B_Truck_01_box_EPOCH",1},
+{"B_Truck_01_transport_EPOCH",2},
+{"B_Truck_01_covered_EPOCH",2},
+{"B_Truck_01_mover_EPOCH",2},
+{"B_Truck_01_box_EPOCH",2},
 {"O_Truck_02_covered_EPOCH",1},
-{"O_Truck_02_transport_EPOCH",2},
-{"O_Truck_03_covered_EPOCH",2},
-{"O_Truck_02_box_EPOCH",2},
-{"O_Truck_03_medical_F",6},
-{"O_Truck_03_covered_F",4},
+{"O_Truck_02_transport_EPOCH",1},
+{"O_Truck_03_covered_EPOCH",4},
+{"O_Truck_02_box_EPOCH",1},
+{"O_Truck_03_medical_F",1},
+{"B_Truck_01_ammo_F",1},
+
 
 // Helicopters 
          
-{"B_Heli_Light_01_EPOCH",8},              //MH9 Hummingbird
-{"I_Heli_Transport_02_EPOCH",4},          //Mohawk
+{"B_Heli_Light_01_EPOCH",4},              //MH9 Hummingbird
+{"I_Heli_Transport_02_EPOCH",3},          //Mohawk
 {"O_Heli_Transport_04_EPOCH",5},          //Taru Lift
-{"O_Heli_Transport_04_bench_EPOCH",3},    //Taru Bench
-{"O_Heli_Transport_04_box_EPOCH",3},      //Taru Transport
-{"O_Heli_Transport_04_covered_EPOCH",2},  //LB Wasp
+{"O_Heli_Transport_04_bench_EPOCH",2},    //Taru Bench
+{"O_Heli_Transport_04_box_EPOCH",2},      //Taru Transport
 {"B_Heli_Transport_03_unarmed_EPOCH",2},  //Huron
-{"I_Heli_light_02_unarmed_F",2},          //Orca
-{"C_Heli_light_01_sheriff_F",1},          //LB Sherrif
-{"C_Heli_light_01_furious_F",1},          //LB Furious
-{"C_Heli_light_01_digital_F",1},          //LB digital
-{"C_Heli_light_01_speedy_F",1},           //LB speedy
 {"C_Heli_light_01_wasp_F",2},             //LB Wasp
 {"mosquito_epoch",4},                     //Coffin
 {"B_Heli_Transport_03_black_F",4},       //Huron Armed
 {"B_Heli_Transport_01_camo_F",4},        //Ghosthawk Armed
-{"C_Heli_Light_01_civil_EPOCH",5}        //new LB
+{"C_Heli_Light_01_civil_EPOCH",4}        //new LB
 
 };
 
 // Traders
 taxRate = 2.5; // controls the price increase for purchases
-starterTraderItems[] = { { "ItemSodaBurst", "meatballs_epoch", "MortarBucket", "CinderBlocks", "VehicleRepair", "CircuitParts", "ItemCorrugated", "PartPlankPack", "ItemRock", "ItemRope", "ItemStick" }, { 5, 5, 5, 10, 5, 5, 10, 5, 5, 5, 5} }; // Starter Items for fresh spawned trader first array is classnames second is quantity.
+starterTraderItems[] = { { "ItemSodaBurst", "meatballs_epoch", "MortarBucket", "CinderBlocks", "VehicleRepair", "ItemCorrugated", "PartPlankPack" }, { 4, 4, 6, 6, 2, 2, 4 } }; // Starter Items for fresh spawned trader first array is classnames second is quantity.
 NPCSlotsLimit = 30; // Max number of traders static or dynamic. Warning! Higher the number lower performance.
 forceStaticTraders = true; // disables traders moving from work to home
 
