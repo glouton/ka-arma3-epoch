@@ -1,7 +1,7 @@
 #include "A3EAI_Client\A3EAI_initclient.sqf";
 
 // cmEarplugs
-//call compile preProcessFileLineNumbers "addons\cmEarplugs\config.sqf";
+call compile preProcessFileLineNumbers "addons\cmEarplugs\config.sqf";
 
 // Supply Drop Alert Event
 "SDROP_Alert" addPublicVariableEventHandler {
@@ -14,6 +14,8 @@
  * see https://community.bistudio.com/wiki/hasInterface
  */
 if(hasInterface) then{
+	// Earplugs menu
+	[] execVM "addons\cmEarplugs\add_menu.sqf";
 	// Status Bar
 	[] execVM "addons\status_bar\init_statusBar.sqf";
 	//  A3 Epoch Spawn Menu: Map Markers
