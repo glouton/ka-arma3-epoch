@@ -1,7 +1,7 @@
 #include "A3EAI_Client\A3EAI_initclient.sqf";
 
 // cmEarplugs
-call compile preProcessFileLineNumbers "addons\cmEarplugs\config.sqf";
+call compile preProcessFileLineNumbers "addons\cmearplugs\config.sqf";
 
 // Supply Drop Alert Event
 "SDROP_Alert" addPublicVariableEventHandler {
