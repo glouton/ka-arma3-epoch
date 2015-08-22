@@ -79,24 +79,26 @@ systemchat "Earplugs have been auto-removed.";
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 cm_EP_LOOP = {
+	player addAction ["Hint Hello!", { hint format ["Hello %1!", _this select 3] }, name player];
+	player addAction ["<img image='addons\cmEarplugs\earplugs.paa' /><t color=""#38eeff""> Earplugs</t>","[] call cm_Earplugs_FUNc","",0,false,false];
 	while {true} do {
 		waitUntil {uisleep 0.5; vehicle player != player};
-			if (InsertAutoEarplugs) then {
-				if (earplugsout) then {
-					[] call cmMuteSound;
-					[] call cmMuteMessage;
-					earplugsout=false;
-				};
+		if (InsertAutoEarplugs) then {
+			if (earplugsout) then {
+				[] call cmMuteSound;
+				[] call cmMuteMessage;
+				earplugsout=false;
 			};
+		};
 
 		waitUntil {uisleep 0.5; vehicle player == player};
-			if (RemoveAutoEarplugs) then {
-				if (!earplugsout) then {
-					[] call cmReturnSound;
-					[] call cmReturnSoundMsg;
-					earplugsout=true;
-				};
+		if (RemoveAutoEarplugs) then {
+			if (!earplugsout) then {
+				[] call cmReturnSound;
+				[] call cmReturnSoundMsg;
+				earplugsout=true;
 			};
+		};
 	};
 };
 

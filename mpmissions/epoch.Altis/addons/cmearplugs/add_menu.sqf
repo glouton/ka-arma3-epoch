@@ -1,1 +1,0 @@
-player addAction ["<img image='addons\cmEarplugs\earplugs.paa' /><t color=""#38eeff""> Earplugs</t>","[] call cm_Earplugs_FUNc","",0,false,false];
