@@ -80,8 +80,8 @@ A3EAI_dynamicWeaponBlacklist = [];
 --------------------------------------------------------------------------------------------------------------------*/		
 
 //(Static/Dynamic/Random Spawns) minAI: Minimum number of units. addAI: maximum number of additional units. unitLevel: Unit level (0-3)
-A3EAI_minAI_village = 1; //1
-A3EAI_addAI_village = 2; //1
+A3EAI_minAI_village = 0; //1
+A3EAI_addAI_village = 0; //1
 A3EAI_unitLevel_village = 0; //0
 A3EAI_spawnChance_village = 0.20; //0.30
 
@@ -92,10 +92,10 @@ A3EAI_unitLevel_city = 1; //1
 A3EAI_spawnChance_city = 0.40; //0.50
 
 //(Static/Dynamic/Random Spawns) minAI: Minimum number of units. addAI: maximum number of additional units. unitLevel: Unit level (0-3)
-A3EAI_minAI_capitalCity = 2; //2
-A3EAI_addAI_capitalCity = 2; //1
-A3EAI_unitLevel_capitalCity = 1; //1
-A3EAI_spawnChance_capitalCity = 0.60; //0.60
+A3EAI_minAI_capitalCity = 5; //2
+A3EAI_addAI_capitalCity = 10; //1
+A3EAI_unitLevel_capitalCity = 2; //1
+A3EAI_spawnChance_capitalCity = 0.80; //0.60
 
 //(Static/Dynamic/Random Spawns) minAI: Minimum number of units. addAI: maximum number of additional units. unitLevel: Unit level (0-3)
 A3EAI_minAI_remoteArea = 1; //1
@@ -104,10 +104,10 @@ A3EAI_unitLevel_remoteArea = 2; //2
 A3EAI_spawnChance_remoteArea = 0.50; //0.70
 
 //(Dynamic/Random Spawns) minAI: Minimum number of units. addAI: maximum number of additional units. unitLevel: Unit level (0-3)
-A3EAI_minAI_wilderness = 1; //1
-A3EAI_addAI_wilderness = 1; //2
+A3EAI_minAI_wilderness = 0; //1
+A3EAI_addAI_wilderness = 0; //2
 A3EAI_unitLevel_wilderness = 1; //1
-A3EAI_spawnChance_wilderness = 0.10; //0.40
+A3EAI_spawnChance_wilderness = 0.01; //0.40
 
 //(For dynamic and random spawns only) Defines amount of time to wait in seconds until cleaning up temporary blacklist area after dynamic/random spawn is deactivated (Default: 1200)
 A3EAI_tempBlacklistTime = 1200;
