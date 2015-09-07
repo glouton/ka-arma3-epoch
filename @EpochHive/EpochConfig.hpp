@@ -5,9 +5,9 @@ StorageSlotsLimit = 1500; // Max storage slots allowed. Warning! Higher the numb
 BuildingSlotsLimit = 1500; // Max building slots allowed. Warning! Higher the number lower performance.
 
 // Time based
-StaticDateTime[] = {0,0,0,4,0}; // {0,0,0,7,0} would forces the server to start at 8am each time it is started while allowing the year, month and day to stay real time. Any values left at 0 will result in no change.
+StaticDateTime[] = {0,0,0,3,0}; // {0,0,0,7,0} would forces the server to start at 8am each time it is started while allowing the year, month and day to stay real time. Any values left at 0 will result in no change.
 timeDifference = 0; // Server uses real time this will allow you to offset just the hour.
-timeMultiplier = 12; // Sets a time multiplier for in-game time. The command range is now capped at 0.1 - 120 to avoid performance problems.
+timeMultiplier = 3; // Sets a time multiplier for in-game time. The command range is now capped at 0.1 - 120 to avoid performance problems.
 lootMultiplier = 0.1; // 1 = max loot bias. This controls how much loot can payout per Epoch loot container.
 // Events
 airDrops = false; // TBA
@@ -36,14 +36,14 @@ allowedVehiclesList[] = {
    
 // Boats
 
-{"C_Boat_Civil_01_EPOCH",4},
-{"C_Boat_Civil_01_rescue_EPOCH",4},
-{"jetski_epoch",3},
-{"B_SDV_01_EPOCH",3},
+{"C_Boat_Civil_01_EPOCH",2},
+{"C_Boat_Civil_01_rescue_EPOCH",2},
+{"jetski_epoch",2},
+{"B_SDV_01_EPOCH",2},
 
 // Bikes
 
-{"C_Quadbike_01_EPOCH",4},
+{"C_Quadbike_01_EPOCH",3},
 
 // Cars
 
@@ -55,11 +55,14 @@ allowedVehiclesList[] = {
 
 // Vans
 
-{"C_Van_01_box_EPOCH",5},
-{"C_Van_01_transport_EPOCH",5},
+{"C_Van_01_box_EPOCH",4},
+{"C_Van_01_transport_EPOCH",4},
 
 // Military Trucks
 
+{"B_MRAP_01_EPOCH",4},
+{"O_MRAP_02_F",4},
+{"I_MRAP_03_F",4},
 {"B_Truck_01_transport_EPOCH",2},
 {"B_Truck_01_covered_EPOCH",2},
 {"B_Truck_01_mover_EPOCH",2},
@@ -68,8 +71,7 @@ allowedVehiclesList[] = {
 {"O_Truck_02_transport_EPOCH",1},
 {"O_Truck_03_covered_EPOCH",4},
 {"O_Truck_02_box_EPOCH",1},
-{"O_Truck_03_medical_F",1},
-{"B_Truck_01_ammo_F",1},
+{"O_Truck_03_ammo_F",1},
 
 
 // Helicopters 
