@@ -1,4 +1,3 @@
-//new2
 7 "BIS_fnc_dynamictext" !="\"BIS_fnc_dynamictext"\" !", 0, 1, 5, 2, 0, 1] spawn bis_fnc_dynamictext;" !", 0, 0.4, 5, 2, 0, 2] spawn bis_fnc_dynamictext;" !", 0, 1, 6, 2, 0, 1] spawn bis_fnc_dynamictext;" !"snil '_fnc_scriptName') then {_fnc_scriptName}"
 7 forceRespawn
 7 setFriend
@@ -17,7 +16,7 @@
 7 setvelocity !="setVelocityTarget" !="_bolt setPosATL _pos;\n_bolt setVelocity [0, 0, -10];" !="EPOCH_target setvelocitytransformation" !="_currentTarget setVelocity [0,0,-0.01];" !="_head setVelocity [\n(sin _dir * _speed), \n(cos _dir * _speed)" !="_vel = velocity this; _dir = getDir player; this setVelocity[(_vel select 0)+(sin _dir * 2),(_vel select 1)+(cos _dir * 2),(_vel select 2)];" !="_head setVelocity [random 2,random 2,10];"
 7 assignAs !="assignAsCargo" !="_unit assignAsGunner _axeCopter;" !="_driver assignAsDriver _axeCopter;" !="axeVIP assignAsDriver vehicle axeVIP;"
 7 assignAsCargo !="_x assignAsCargo axeGeneralsBoat;" !="axeVIP assignAsCargo vehicle player;" !="axeVIP assignAsCargo vehicle axeVIP;"
-1 allowDamage !="_unit allowDamage false;" !="_unit allowDamage true;" !="player allowDamage true;" !="vehicle player allowDamage true;" !="player allowDamage false;"
+7 allowDamage !="_unit allowDamage false;" !="_unit allowDamage true;" !="player allowDamage true;" !="vehicle player allowDamage true;" !="player allowDamage false;"
 7 addWeaponCargo !="_acceptHolder addWeaponCargo [_wWeapon, 1] ;"
 7 onMapSingleClick !="onMapSingleClick '';"
 7 addMagazine !"addMagazineCargo" !="player addMagazine _craftItem;" !="player addMagazine \"jerrycanE_epoch\";" !="player addMagazine \"emptyjar_epoch\";" !="player addMagazine \"jerrycan_epoch\";" !="player addMagazine \"Hatchet_swing\";" !="player addMagazine [(_x select 0),(_x select 1)]" !="player addMagazine _x;" !="if !(player canAdd (_x select 0)) exitWith {};\nplayer addMagazine[_x select 0, _x select 1];"
@@ -36,7 +35,7 @@
 7 createTeam
 7 createDialog !="createDialog \"QuickTake\";" !="createDialog \"InteractBank\";" !="createdialog \"SelectGender\";" !="_handled = createdialog _dialog;" !="if !(createdialog \"InteractItem\") exitWith {};" !="createDialog \"TapOut\";" !="if !(createdialog \"Trade\") exitWith {};" !="_ok = createdialog \"Interact\";" !="_ok = createdialog \"TradeNPCMenu\";" !="createDialog \"Epoch_myGroup\";" !="createDialog (if ((Epoch_my_GroupUID == \"\") && (Epoch_my_Group isEqualTo [])) then {\"EPOCH_createGrp\"} else {\"Epoch_myGroup\"});" !="createDialog \"GroupRequests\";" !="_ok = createdialog \"MissionSelect\";" !="createDialog 'Skaronator_AdminMenu';" !"createdialog \"spaz_spawn\";"
 7 deleteMarker !="deleteMarkerLocal format[\"SEM_MissionMarker" !"deletemarkerlocal"
-7 setMarker !="Local" !="MarkerNorth" !="MarkerSouth" !="MarkerEast" !="MarkerWest" !="MarkerCentral"7 createMarker
+7 setMarker !="Local" !="MarkerNorth" !="MarkerSouth" !="MarkerEast" !="MarkerWest" !="MarkerCentral"
 7 createMarker !="createMarkerLocal [format[\"SEM_MissionMarker" !"createmarkerlocal" !="MarkerNorth" !="MarkerSouth" !="MarkerEast" !="MarkerWest" !="MarkerCentral"
 7 assignItem !="axeVIP assignItem _item;"
 7 forceAddUniform
@@ -47,7 +46,7 @@
 7 ctrlSetEventHandler !"BIS_fnc_guiMessage_status" !"ctrlSetEventHandler ['LBDblClick', '_this call" !="_buttonRespawn ctrlseteventhandler [\"buttonclick\",\"with uinamespace do {['buttonRespawn',"
 7 addMPEventHandler
 7 addEventHandler !"displayAddEventHandler" !"ctrlAddEventHandler" !"FiredNear" !"EpeContactStart" !"InventoryClosed" !"GetOut" !"InventoryOpened" !"local" !"Respawn" !"Put" !"Take" !"Fired" !"Killed" !" [\"PostReset\",{BIS_EnginePPReset = true;} ];" !"_logic addeventhandler [\n\"local\""
-7 displayAddEventHandler !"[_display] call _fnc_animate;" !"tVersion select 4) == \"Development\") then" !"_display displayaddeventhandler\n[\n\"mousemoving\"," !"(findDisplay 46) displayAddEventHandler [\"KeyDown\",\"true\"];" !"(findDisplay 46) displayAddEventHandler [\"KeyDown\",\"_this call EPOCH_KeyDown\"];" !="_addCase = _display46 displayAddEventHandler ['KeyDown',{_this call EPOCH_KeyDown;}];" !"_display displayaddeventhandler [\"unload\",\"uinamespace setvariable ['BIS_fnc_guiMess" !="findDisplay -1337 displayAddEventHandler ['Unload'" !="_display displayaddeventhandler [\"keydown\",\"with uinamespace do {['keyDown'"
+7 displayAddEventHandler !"[_display] call _fnc_animate;" !"tVersion select 4) == \"Development\") then" !"_display displayaddeventhandler\n[\n\"mousemoving\"," !"(findDisplay 46) displayAddEventHandler [\"KeyDown\",\"true\"];" !"(findDisplay 46) displayAddEventHandler [\"KeyDown\",\"_this call EPOCH_KeyDown\"];" !="_addCase = _display46 displayAddEventHandler ['KeyDown',{_this call EPOCH_KeyDown;}];" !"_display displayaddeventhandler [\"unload\",\"uinamespace setvariable ['BIS_fnc_guiMess" !="findDisplay -1337 displayAddEventHandler ['Unload'" !"(findDisplay 8332) displayAddEventHandler [\"KeyDown\",\"true\"];"
 7 ctrlAddEventHandler !"rCfg >> \"refreshDelay\");" !" [\n\"draw\"," !" [\"buttonclick\"," !="(uiNamespace getVariable 'ESP_map') ctrlAddEventHandler['Draw', '_esp_targets = EPOCH_ESPMAP_TARGETS;" !="ctrlAddEventHandler ['MouseButtonDown'" !="(_display displayctrl _idc) ctrlAddEventHandler [\"LBSelChanged\","
 7 removeAllEventHandlers !="ctrlRemoveAllEventHandlers" !="_vehicle removeAllEventHandlers \"GetOut\";" !="_sapper removeAllEventHandlers \"Hit\";\n_sapper removeAllEventHandlers \"FiredNear\";" !="_display46 displayRemoveAllEventHandlers 'KeyDown';"
 7 removeAllMissionEventHandlers
