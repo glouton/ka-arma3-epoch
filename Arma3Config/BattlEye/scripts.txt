@@ -16,7 +16,7 @@
 7 setvelocity !="setVelocityTarget" !="_bolt setPosATL _pos;\n_bolt setVelocity [0, 0, -10];" !="EPOCH_target setvelocitytransformation" !="_currentTarget setVelocity [0,0,-0.01];" !="_head setVelocity [\n(sin _dir * _speed), \n(cos _dir * _speed)" !="_vel = velocity this; _dir = getDir player; this setVelocity[(_vel select 0)+(sin _dir * 2),(_vel select 1)+(cos _dir * 2),(_vel select 2)];" !="_head setVelocity [random 2,random 2,10];"
 7 assignAs !="assignAsCargo" !="_unit assignAsGunner _axeCopter;" !="_driver assignAsDriver _axeCopter;" !="axeVIP assignAsDriver vehicle axeVIP;"
 7 assignAsCargo !="_x assignAsCargo axeGeneralsBoat;" !="axeVIP assignAsCargo vehicle player;" !="axeVIP assignAsCargo vehicle axeVIP;"
-7 allowDamage !="_unit allowDamage false;" !="_unit allowDamage true;" !="player allowDamage true;" !="vehicle player allowDamage true;" !="player allowDamage false;"
+7 allowDamage !="_unit allowDamage false;" !="_unit allowDamage true;" !="player allowDamage true;" !="vehicle player allowDamage true;" !="player allowDamage false;" !="if(!isPlayer _x)then{_x allowDamage"
 7 addWeaponCargo !="_acceptHolder addWeaponCargo [_wWeapon, 1] ;"
 7 onMapSingleClick !="onMapSingleClick '';"
 7 addMagazine !"addMagazineCargo" !="player addMagazine _craftItem;" !="player addMagazine \"jerrycanE_epoch\";" !="player addMagazine \"emptyjar_epoch\";" !="player addMagazine \"jerrycan_epoch\";" !="player addMagazine \"Hatchet_swing\";" !="player addMagazine [(_x select 0),(_x select 1)]" !="player addMagazine _x;" !="if !(player canAdd (_x select 0)) exitWith {};\nplayer addMagazine[_x select 0, _x select 1];"
