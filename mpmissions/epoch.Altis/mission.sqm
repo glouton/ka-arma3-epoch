@@ -1,12 +1,4 @@
-////////////////////////////////////////////////////////////////////
-//DeRap: Produced from mikero's Dos Tools Dll version 4.97
-//Sat Sep 12 13:19:51 2015 : Source 'file' date Sat Sep 12 13:19:51 2015
-//http://dev-heaven.net/projects/list_files/mikero-pbodll
-////////////////////////////////////////////////////////////////////
-
 #define _ARMA_
-
-//Class epoch.Altis : mission.sqm{
 version = 12;
 class Mission
 {
@@ -2037,6 +2029,34 @@ class Mission
 			};
 		};
 	};
+	// Custom image in the clone room
+	// Phone booth for spawn menu
+	class Vehicles
+	{
+		items=2;
+		class Item0
+		{
+			position[] = {23600.611,2.8548489,17990.768};
+			azimut = 180.4026;
+			offsetY = 5;
+			id = 1;
+			side = "EMPTY";
+			vehicle = "UserTexture10m_F";
+			skill = 0.60000002;
+			init = "this setObjectTexture [0, ""image.jpg""]";
+		};
+		class Item1
+		{
+			position[] = {23600.611,0.233421,17995.768};
+			name = "spawn_menu_phone_booth";
+			azimut = 180.4026;
+			id = 2;
+			side = "EMPTY";
+			vehicle = "Land_PhoneBooth_02_F";
+			skill = 0.60000002;
+			init = "this addaction [""Spawn Menu"", ""addons\spawn_menu\init.sqf""]";
+		};
+	};
 	class Markers
 	{
 		items = 3;
@@ -2132,4 +2152,3 @@ class OutroLoose
 		forecastFogDecay = 0.013;
 	};
 };
-//};
