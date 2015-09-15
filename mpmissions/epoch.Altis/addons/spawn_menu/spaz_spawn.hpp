@@ -283,6 +283,7 @@ class spaz_spawn
             h = 0.0440055 * safezoneH;
             action = "closedialog 0; _nil=[] spawn {call SPAZ_SPAWN_C;};";
         };
+		/*
         class spaz_sbr: RscButton
         {
             idc = 1605;
@@ -292,7 +293,18 @@ class spaz_spawn
             w = 0.0618602 * safezoneW;
             h = 0.0440055 * safezoneH;
             action = "closedialog 0; _nil=[] spawn {call SPAZ_SPAWN_R;};";
-        };       
+        };
+		*/
+        class spaz_sb6: RscButton
+        {
+            idc = 1606;
+            text = "SOUTH WEST"; //--- ToDo: Localize;
+            x = 0.618565 * safezoneW + safezoneX;
+            y = 0.654019 * safezoneH + safezoneY;
+            w = 0.0618602 * safezoneW;
+            h = 0.0440055 * safezoneH;
+            action = "closedialog 0; _nil=[] spawn {call SPAZ_SPAWN_SW;};";
+        };
     };
 };
 

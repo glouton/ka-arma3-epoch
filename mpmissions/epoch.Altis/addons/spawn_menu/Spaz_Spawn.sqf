@@ -83,6 +83,17 @@ SPAZ_SPAWN_S = {
 	cutText ["","BLACK IN"];
 };
 
+SPAZ_SPAWN_SW = {
+	switch (KA_SPAZ_SPAWN_MAP_NAME) do {
+		case "altis":{player setPos Altis_Spawn_South_West,player setDir 0;};
+		case "stratis":{player setPos Stratis_Spawn_South_West,player setDir 0;};
+		case "bornholm":{player setPos Bornholm_Spawn_South_West,player setDir 43.1966;};
+		case "chernarus":{player setPos Chernarus_Spawn_South_West,player setDir 0;};
+		default {player setPos Bornholm_Spawn_South_West,player setDir 43.1966;};
+	};
+	cutText ["","BLACK IN"];
+};
+
 SPAZ_SPAWN_W = {
 	switch (KA_SPAZ_SPAWN_MAP_NAME) do {
 		case "altis":{player setPos Altis_Spawn_West,player setDir 0;};
