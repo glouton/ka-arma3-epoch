@@ -20,7 +20,7 @@ antihack_customVariablesCheck = false; // true enables variable scanning on miss
 antihack_customVariables[] = {}; //Add global variables from custom scripts, example: {"MyOwnVar","CP_KK"} //Global Variables begin without "_" !!
 antihack_customVariablesCheckMode = 0; // 0 = Ban, 1 = Log, 2 == learning mode (only enable with trusted players in a passwored server to profile your variables keep disabled for normal operation)
 
-adminMenu_Owner[] = {{"76561197994145602","GTXADMIN1"},{"76561197960437937","GTXADMIN2"},{"76561198072254600","GTXADMIN3"},{"0","Enter Name Here1"},{"0","Enter Name Here2"},{"0","Enter Name Here3"},{"0","Enter Name Here4"},{"0","Enter Name Here5"}};
+adminMenu_Owner[] = {}; 
 adminMenu_OwnerSetting[] = {
 	"ESP-PLAYER",
 	"ESP-VEHICLE",
@@ -52,10 +52,10 @@ adminMenu_OwnerSetting[] = {
 	"VEHICLEREPAIR"
 };
 
-adminMenu_High[] = {{"0","Enter Name Here6"},{"0","Enter Name Here7"},{"0","Enter Name Here8"},{"0","Enter Name Here9"},{"0","Enter Name Here10"}};
+adminMenu_High[] = {};
 adminMenu_HighSetting[] = {"PLAYER-TELEPORT","MAP-TELEPORT","TARGET-HEAL","TARGET-AMMO","TARGET-KILL","VEHICLEFLIP","BANPANNEL"};
 
-adminMenu_Low[] = {{"0","![A3adminMenuNameLow1]"},{"0","Enter Name Here"},{"0","Enter Name Here"},{"0","Enter Name Here"},{"0","Enter Name Here"}};
+adminMenu_Low[] = {};
 adminMenu_LowSetting[] = {"PLAYER-TELEPORT","MAP-TELEPORT","TARGET-HEAL"};
 
 adminMenu_BanReasons[] = {"Traderzone","Hacking","Glitch","Combat Log"};
