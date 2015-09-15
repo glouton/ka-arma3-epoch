@@ -5,8 +5,8 @@
 #define KA_SPAZ_SPAWN_MARKER_COLOR		"ColorRed"
 
 private [
-	"_markerNorthPos", "_markerSouthPos", "_markerEastPos", "_markerWestPos", "_markerCentralPos",
-	"_markerNorth", "_markerSouth", "_markerEast", "_markerWest", "_markerCentral"
+	"_markerNorthPos", "_markerSouthPos", "_markerEastPos", "_markerWestPos", "_markerCentralPos", "_markerSouthWestPos",
+	"_markerNorth", "_markerSouth", "_markerEast", "_markerWest", "_markerCentral", "_markerSouthWest"
 ];
 
 switch (KA_SPAZ_SPAWN_MAP_NAME) do {
@@ -17,6 +17,7 @@ switch (KA_SPAZ_SPAWN_MAP_NAME) do {
 		_markerEastPos = Altis_Spawn_East;
 		_markerWestPos = Altis_Spawn_West;
 		_markerCentralPos = Altis_Spawn_Central;
+		_markerSouthWestPos = Altis_Spawn_South_West;
 	};
 	case "stratis":{
 		_markerNorthPos = Statis_Spawn_North;
@@ -24,6 +25,7 @@ switch (KA_SPAZ_SPAWN_MAP_NAME) do {
 		_markerEastPos = Statis_Spawn_East;
 		_markerWestPos = Statis_Spawn_West;
 		_markerCentralPos = Statis_Spawn_Central;
+		_markerSouthWestPos = Statis_Spawn_South_West;
 	};
 	case "bornholm":{
 		_markerNorthPos = Bornholm_Spawn_North;
@@ -31,6 +33,7 @@ switch (KA_SPAZ_SPAWN_MAP_NAME) do {
 		_markerEastPos = Bornholm_Spawn_East;
 		_markerWestPos = Bornholm_Spawn_West;
 		_markerCentralPos = Bornholm_Spawn_Central;
+		_markerSouthWestPos = Bornholm_Spawn_South_West;
 	};
 	case "chernarus":{
 		_markerNorthPos = Chernarus_Spawn_North;
@@ -38,6 +41,7 @@ switch (KA_SPAZ_SPAWN_MAP_NAME) do {
 		_markerEastPos = Chernarus_Spawn_East;
 		_markerWestPos = Chernarus_Spawn_West;
 		_markerCentralPos = Chernarus_Spawn_Central;
+		_markerSouthWestPos = Chernarus_Spawn_South_West;
 	};
 	default {
 		_markerNorthPos = Altis_Spawn_North;
@@ -45,6 +49,7 @@ switch (KA_SPAZ_SPAWN_MAP_NAME) do {
 		_markerEastPos = Altis_Spawn_East;
 		_markerWestPos = Altis_Spawn_West;
 		_markerCentralPos = Altis_Spawn_Central;
+		_markerSouthWestPos = Altis_Spawn_South_West;
 	};
 };
 
@@ -72,3 +77,8 @@ _markerCentral = createMarker ["MarkerCentral",_markerCentralPos];
 _markerCentral setMarkerShape KA_SPAZ_SPAWN_MARKER_SHAPE;
 _markerCentral setMarkerType KA_SPAZ_SPAWN_MARKER_TYPE;
 "MarkerCentral" setMarkerColor KA_SPAZ_SPAWN_MARKER_COLOR;
+
+_markerSouthWest = createMarker ["MarkerSouthWest",_markerSouthWestPos];
+_markerSouthWest setMarkerShape KA_SPAZ_SPAWN_MARKER_SHAPE;
+_markerSouthWest setMarkerType KA_SPAZ_SPAWN_MARKER_TYPE;
+"MarkerSouthWest" setMarkerColor KA_SPAZ_SPAWN_MARKER_COLOR;
