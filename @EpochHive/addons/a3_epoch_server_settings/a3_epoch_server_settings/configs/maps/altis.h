@@ -266,17 +266,6 @@ class Altis : Default
 			{ "Land_dp_bigTank_F", { 14328.1, 13488.2, -0.64909101 }, 182, true }
 	};
 	staticNpcPos[] = {
-			// tradercity 1
-			{ "C_man_w_worker_F", { 13323.1, 14527.3, 0.00144649 }, 201.163 },
-			{ "C_man_w_worker_F", { 13331.2, 14524.6, 0.00144362 }, 182.606 },
-			{ "C_Orestes", { 13318, 14518.3, 0 }, 173.189 },
-			{ "C_man_shorts_4_F_asia", { 13349.9, 14490.7, 0.750791 }, 339.975 },
-			// tradercity 2
-			{ "C_man_hunter_1_F", { 6177.13, 16835.1, 0.0014267 }, 66.2026 },
-			{ "C_man_p_fugitive_F_afro", { 6196.01, 16833, 0.00157166 }, 310.814 },
-			// tradercity 3
-			{ "C_journalist_F", { 18460.6, 14259.6, 0.00160599 }, 317.76 },
-			{ "C_scientist_F", { 18441.7, 14271.7, 0.00142479 }, 49.9898 }
 	};
 
 	// Prefered locations for vehicles
