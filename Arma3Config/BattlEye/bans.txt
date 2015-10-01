@@ -1,10 +1,1 @@
-e807c428359222ba9b3f7c6feb17b051 -1 EpochMod.com Autoban
-e807c428359222ba9b3f7c6feb17b051 -1 EpochMod.com Autoban
-e807c428359222ba9b3f7c6feb17b051 -1 EpochMod.com Autoban
-e807c428359222ba9b3f7c6feb17b051 -1 EpochMod.com Autoban
-e807c428359222ba9b3f7c6feb17b051 -1 EpochMod.com Autoban
-e807c428359222ba9b3f7c6feb17b051 -1 EpochMod.com Autoban
-e807c428359222ba9b3f7c6feb17b051 -1 EpochMod.com Autoban
-e807c428359222ba9b3f7c6feb17b051 -1 EpochMod.com Autoban
-e807c428359222ba9b3f7c6feb17b051 -1 EpochMod.com Autoban
-e807c428359222ba9b3f7c6feb17b051 -1 EpochMod.com Autoban
+#ban file
