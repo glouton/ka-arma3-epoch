@@ -12,7 +12,7 @@ lootMultiplier = 0.1; // 1 = max loot bias. This controls how much loot can payo
 // Events
 airDrops = false; // TBA
 WeatherChangeTime = 1200; // This controls how fast the weather changes as well as how fast shipping containers and earthquakes happen.
-WeatherStaticForecast[] = {}; // Default: {75.5,0,{0,0,0},0,{1,1}}; // Clear day; {19,1,{1,1,40},1,{5,5}}; // Cold Foggy Rainy Overcast Windy; Format: {temp <scalar>,rain <scalar>,fog <array>,overcast <scalar>,wind <array>}
+WeatherStaticForecast[] = {75.5,0,{0,0,0},0,{1,1}}; // Default: {75.5,0,{0,0,0},0,{1,1}}; // Clear day; {19,1,{1,1,40},1,{5,5}}; // Cold Foggy Rainy Overcast Windy; Format: {temp <scalar>,rain <scalar>,fog <array>,overcast <scalar>,wind <array>}
 events[] = {
     { 3600, "CarnivalSpawner" }, // SECOND <scalar>, EVENT <string>
     { 2400, "EarthQuake" },
@@ -86,7 +86,10 @@ allowedVehiclesList[] = {
 {"mosquito_epoch",4},                     //Coffin
 {"B_Heli_Transport_03_black_F",4},       //Huron Armed
 {"B_Heli_Transport_01_camo_F",4},        //Ghosthawk Armed
-{"C_Heli_Light_01_civil_EPOCH",4}        //new LB
+{"C_Heli_Light_01_civil_EPOCH",4},        //new LB
+{"I_Heli_light_03_unarmed_F",4},         //Hellcat
+{"O_Heli_Light_02_unarmed_F",4}         //Orca
+
 
 };
 
