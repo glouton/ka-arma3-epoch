@@ -99,7 +99,7 @@ A3EAI_dynamicWeaponBlacklist = [];
 A3EAI_radioMsgs = true;
 
 //Enable or disable AI death messages. Messages will be visible to player responsible for killing the AI unit as well as all group players." (Default: false)
-A3EAI_deathMessages = false;	
+A3EAI_deathMessages = true;
 
 
 /*	Shared AI Unit Settings. These settings affect all AI spawned unless noted otherwise.
@@ -157,7 +157,7 @@ A3EAI_tempNVGs = false;
 A3EAI_GLRequirement = 1;	
 
 //Minimum AI unit level requirement to use launcher weapons. Set to -1 to disable completely. (Default: -1)
-A3EAI_launcherLevelReq = -1;	
+A3EAI_launcherLevelReq = 1;
 
 //List of launcher-type weapons that AI can use.
 A3EAI_launcherTypes = ["launch_NLAW_F","launch_RPG32_F","launch_B_Titan_F","launch_I_Titan_F","launch_O_Titan_F","launch_B_Titan_short_F","launch_I_Titan_short_F","launch_O_Titan_short_F"];	
@@ -262,7 +262,7 @@ A3EAI_waypointBlacklistLand = [];  //Affects Land vehicles (including UGVs)
 --------------------------------------------------------------------------------------------------------------------*/		
 
 //Global maximum number of active AI air vehicle patrols. Set at 0 to disable (Default: 0).							
-A3EAI_maxHeliPatrols = 0;	
+A3EAI_maxHeliPatrols = 8;	
 
 //Probability of spawning Level 0/1/2/3 AI air vehicle patrol spawns. Probabilities should add up to 1.00		
 A3EAI_levelChancesAir = [0.00,0.50,0.35,0.15];	
@@ -307,7 +307,7 @@ A3EAI_paraDropAmount = 3;
 --------------------------------------------------------------------------------------------------------------------*/	
 
 //Global maximum number of active AI land vehicle patrols. Set at 0 to disable (Default: 0).	
-A3EAI_maxLandPatrols = 0;
+A3EAI_maxLandPatrols = 12;
 
 //Probability of spawning Level 0/1/2/3 AI land vehicle spawns. Probabilities should add up to 1.00		
 A3EAI_levelChancesLand = [0.00,0.50,0.35,0.15];	
@@ -318,21 +318,11 @@ A3EAI_respawnLandMaxTime = 900;
 
 //Classnames of land vehicle types to use, with the maximum amount of each type to spawn.
 A3EAI_vehList = [
-	["B_MRAP_01_EPOCH",5],
-	["C_Van_01_box_EPOCH",5],
-	["C_Van_01_transport_EPOCH",5],
-	["C_Offroad_01_EPOCH",5],
-	["C_Hatchback_02_EPOCH",5],
-	["C_Hatchback_01_EPOCH",5],
-	["C_SUV_01_EPOCH",5],
-	["B_Truck_01_transport_EPOCH",5],
-    ["B_Truck_01_covered_EPOCH",5],
-    ["B_Truck_01_mover_EPOCH",5],
-    ["B_Truck_01_box_EPOCH",5],
-    ["O_Truck_02_covered_EPOCH",5],
-    ["O_Truck_02_transport_EPOCH",5],
-    ["O_Truck_03_covered_EPOCH",5],
-    ["O_Truck_02_box_EPOCH",5]
+	["B_MRAP_01_hmg_F",5],
+	["I_MRAP_03_hmg_F",5],
+	["B_G_Offroad_01_armed_F",5],
+	["B_G_Offroad_01_armed_F",5],
+	["O_MRAP_02_hmg_F",5]
 ];
 
 //Maximum number of gunner units per land vehicle. Limited by actual number of available gunner positions. (Default: 2)
@@ -352,7 +342,7 @@ A3EAI_vehCargoUnits = 3;
 --------------------------------------------------------------------------------------------------------------------*/
 
 //Maximum allowed number of simultaneous active reinforcements (Default: 5)
-A3EAI_maxAirReinforcements = 5;
+A3EAI_maxAirReinforcements = 6;
 
 //Air vehicles to use as reinforcement vehicles. Default: ["B_Heli_Transport_01_F","B_Heli_Light_01_armed_F"]
 //Armed air vehicles will detect and engage players within reinforcement area. Unarmed air vehicles will deploy an AI paradrop group.
