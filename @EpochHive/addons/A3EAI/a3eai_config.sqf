@@ -160,7 +160,7 @@ A3EAI_GLRequirement = 1;
 A3EAI_launcherLevelReq = 1;
 
 //List of launcher-type weapons that AI can use.
-A3EAI_launcherTypes = ["launch_NLAW_F","launch_RPG32_F","launch_B_Titan_F","launch_I_Titan_F","launch_O_Titan_F","launch_B_Titan_short_F","launch_I_Titan_short_F","launch_O_Titan_short_F"];	
+A3EAI_launcherTypes = ["launch_RPG32_F"];	
 
 //Maximum number of launcher weapons allowed per group (Default: 1)
 A3EAI_launchersPerGroup = 1;
