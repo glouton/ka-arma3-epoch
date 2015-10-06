@@ -1,5 +1,0 @@
-///////<HEADER>///////
-prefix=a3_epoch_server_settings
-Pbo Type is: Arma Addon
-Sha: '7005A9198747D27BC8A914FC941DB7B7491B8D30'
-//////</HEADER>//////
